@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'trasandina';
+  src: url('../fonts/trasandinabold-webfont.eot');
+  src: url('../fonts/trasandinabold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/trasandinabold-webfont.woff2') format('woff2'),
+       url('../fonts/trasandinabold-webfont.woff') format('woff'),
+       url('../fonts/trasandinabold-webfont.ttf') format('truetype'),
+       url('../fonts/trasandinabold-webfont.svg#trasandina_boldbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'trasandina';
+  src: url('../fonts/trasandinalight-webfont.eot');
+  src: url('../fonts/trasandinalight-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/trasandinalight-webfont.woff2') format('woff2'),
+       url('../fonts/trasandinalight-webfont.woff') format('woff'),
+       url('../fonts/trasandinalight-webfont.ttf') format('truetype'),
+       url('../fonts/trasandinalight-webfont.svg#trasandina_lightlight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Font sizes
+$font-xxxs:   13px;
+$font-xxs:    14px;
+$font-xs:     16px;
+$font-s:      18px;
+$font-m:      20px;
+$font-l:      24px;
+$font-xl:     34px;
+$font-xxl:    44px;
+$font-xxxl:   55px;
+
+// Font fallbacks
+$font-primary-fallbacks: Tahoma, Times, sans-serif;
+
+// Fonts
+$font-primary: 'trasandina', $font-primary-fallbacks;
+
+// Font sizes
+$base:        16px;
+
+$heading1:    53px;
+$heading2:    30px;
+$heading3:    22px;
+
+$quotes:    22px;
+
+$author-footer-bio: 16px;
+$author-footer-name: 22px;
+
+$article-info: 15px;
+$article-more: 20px;
+
+$post-divider: 16px;
+
+$bio: 15px;

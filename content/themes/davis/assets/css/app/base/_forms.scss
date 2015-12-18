@@ -1,0 +1,32 @@
+.form,
+.mc4wp-form {
+  input[type="submit"] {
+    background-color: color(darkblue);
+    border: none;
+    padding: rem($space-xs) rem($space-m);
+    font-size: $font-xxxs;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: $font-xs;
+    font-family: $font-primary;
+    color: white;
+    margin-top: 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include respond-to(600) {
+      width: 100%;
+    }
+
+  }
+
+  input[type="email"] {
+    padding: rem($space-xs) rem($space-m);
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+  }
+}

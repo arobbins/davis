@@ -1,0 +1,1 @@
+<p>Change image under Theme Settings</p>

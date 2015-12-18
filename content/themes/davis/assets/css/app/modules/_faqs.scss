@@ -1,0 +1,54 @@
+.faqs {
+  @include respond-to(600) {
+    margin: 0;
+  }
+}
+
+.faq-question {
+  padding: 0.5em;
+  font-size: 18px;
+  -webkit-tap-highlight-color: transparent;
+
+  @include respond-to(600) {
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .fa {
+    margin-right: 0.5em;
+    color: color(darkgreen);
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.faqs-group {
+  margin: 2em 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.faq-answer {
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  @include respond-to(600) {
+    margin-left: 10px;
+  }
+
+}
+
+.faqs-heading {
+  font-size: 28px;
+
+  @include respond-to(600) {
+    font-size: 22px;
+  }
+}

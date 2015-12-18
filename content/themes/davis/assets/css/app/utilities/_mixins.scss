@@ -1,0 +1,80 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+}
+
+// Breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin transition-fast() {
+  transition: background-color .2s ease;
+}
+
+@mixin shadow() {
+  box-shadow: 0 6px 15px -2px rgba(0,0,0, 0.1);
+}
+
+@mixin dim() {
+  transition: opacity 0.1s ease-in-out;
+  opacity: 0.4;
+}
+
+@mixin rowMachine($cols, $margin) {
+
+  @if $cols == 1 {
+    flex: 1 0 auto;
+    max-width: 100%;
+
+  } @else {
+    flex: 0 0 ((100% - (($cols - 1) * $margin)) / $cols);
+    max-width: ((100% - (($cols - 1) * $margin)) / $cols);
+
+  }
+
+  &:nth-child(n) {
+    margin-right: $margin;
+  }
+
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
+
+}

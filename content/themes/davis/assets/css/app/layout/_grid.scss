@@ -1,0 +1,216 @@
+$margin: 2%;
+$containerWidth: 1200px;
+$cols-1: 1;
+$cols-2: 2;
+$cols-3: 3;
+$cols-4: 4;
+$cols-5: 5;
+$cols-6: 6;
+$cols-7: 7;
+
+//
+// Grid, nice n simple
+//
+.l-row {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: rem($containerWidth);
+  width: 100%;
+  // flex: 1;
+  // flex-wrap: wrap;
+
+  @include respond-to(500) {
+    flex-direction: column;
+  }
+}
+
+.l-col {
+  // flex: 1 0 auto;
+  border: 1px solid #00a9e0;
+  padding: 1em;
+
+  &:only-of-type {
+    margin-right: 0;
+  }
+}
+
+
+//
+// Columns
+//
+.l-col-1 {
+  @include rowMachine($cols-1, $margin)
+}
+
+.l-col-2 {
+  @include rowMachine($cols-2, $margin);
+
+  @include respond-to(600) {
+    @include rowMachine($cols-1, $margin);
+  }
+}
+
+.l-col-3 {
+  @include rowMachine($cols-3, $margin);
+
+  @include respond-to(700) {
+    @include rowMachine($cols-2, $margin);
+  }
+
+  @include respond-to(500) {
+    @include rowMachine($cols-1, $margin);
+  }
+}
+
+.l-col-4 {
+  @include rowMachine($cols-4, $margin);
+
+  @include respond-to(800) {
+    @include rowMachine($cols-2, $margin);
+  }
+
+  @include respond-to(500) {
+    @include rowMachine($cols-1, $margin);
+  }
+}
+
+.l-col-5 {
+  @include rowMachine($cols-5, $margin);
+
+  @include respond-to(800) {
+    @include rowMachine($cols-2, $margin);
+  }
+
+  @include respond-to(500) {
+    @include rowMachine($cols-1, $margin);
+  }
+}
+
+.l-col-6 {
+  @include rowMachine($cols-6, $margin);
+
+  @include respond-to(1000) {
+    @include rowMachine($cols-4, $margin);
+  }
+
+  @include respond-to(800) {
+    @include rowMachine($cols-3, $margin);
+  }
+
+  @include respond-to(700) {
+    @include rowMachine($cols-2, $margin);
+  }
+
+  @include respond-to(500) {
+    @include rowMachine($cols-1, $margin);
+  }
+}
+
+.l-col-7 {
+  @include rowMachine($cols-7, $margin);
+
+  @include respond-to(1100) {
+    @include rowMachine($cols-5, $margin);
+  }
+
+  @include respond-to(900) {
+    @include rowMachine($cols-4, $margin);
+  }
+
+  @include respond-to(700) {
+    @include rowMachine($cols-3, $margin);
+  }
+
+  @include respond-to(600) {
+    @include rowMachine($cols-2, $margin);
+  }
+
+  @include respond-to(500) {
+    @include rowMachine($cols-1, $margin);
+  }
+}
+
+.l-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.l-col-center {
+  align-items: center;
+}
+
+//
+// Ordering
+//
+.l-order-1 {
+  order: 1;
+}
+
+.l-order-2 {
+  order: 2;
+}
+
+.l-order-3 {
+  order: 3;
+}
+
+.l-order-4 {
+  order: 4;
+}
+
+.l-order-5 {
+  order: 5;
+}
+
+.l-order-6 {
+  order: 6;
+}
+
+.l-order-7 {
+  order: 7;
+}
+
+//
+// Row aignment
+//
+.l-row-right {
+  justify-content: flex-end;
+}
+
+.l-row-center {
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.l-row-justify {
+  justify-content: space-between;
+}
+
+.l-row-spaced {
+  justify-content: space-around;
+}
+
+.l-row-reverse {
+  flex-direction: row-reverse;
+}
+
+//
+// Misc aignment and spacing
+//
+.l-fit {
+  flex: 1;
+  min-width: 0;
+}
+
+//
+// IE9
+//
+.no-flexbox,
+.no-flexboxlegacy {
+ .l-row,
+ .l-col {
+    display: block;
+ }
+ .l-col {
+    float: left;
+ }
+}

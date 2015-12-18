@@ -1,0 +1,103 @@
+.widget {
+  padding: 0 2em;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+
+  @include respond-to(900) {
+    width: 50%;
+  }
+
+  @include respond-to(600) {
+    width: 100%;
+    margin-bottom: rem($space-l);
+    margin-top: 0;
+    padding: 0;
+  }
+
+  &:nth-child(even) {
+    @include respond-to(900) {
+      border-right: none;
+      margin-top: rem($space-m);
+    }
+
+    @include respond-to(600) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-child(odd) {
+    @include respond-to(600) {
+      border-right: none;
+    }
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  ul {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.widget-social {
+  @include respond-to(600) {
+    margin-top: rem($space-xl);
+  }
+}
+
+.widget-signature {
+
+  img {
+    @include respond-to(900) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+.widget-title {
+  font-size: $font-s;
+
+  @include respond-to(600) {
+    text-align: center;
+  }
+}
+
+.widget-customer-service,
+.widget-social {
+  text-align: center;
+}
+
+.widget-social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.widget-social-item {
+  float: left;
+}
+
+.widget-social-link {
+  font-size: 26px;
+  color: color(darkblue);
+  margin-right: 16px;
+
+  &:hover {
+    color: color(darkgreen);
+  }
+}

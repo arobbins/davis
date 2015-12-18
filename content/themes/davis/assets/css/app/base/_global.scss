@@ -1,0 +1,60 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8;
+  font-size: $base;
+  font-family: $font-primary;
+  color: color(darkblue);
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.l-col {
+    padding: 0;
+  }
+
+  &.animated {
+    animation-duration: 0.3s;
+  }
+
+  @include respond-to(600) {
+    font-size: ($base - 2px);
+    line-height: 2;
+  }
+}
+
+::selection {
+  background-color: color(offwhite);
+  // color: white;
+}
+
+code, kbd, pre, samp {
+  border-radius: rem($space-s / 2);
+}
+
+ul, ol, dl {
+  padding: 0;
+  margin: rem($space-s) 0 rem($space-s) rem($space-s);
+}
+
+.logo,
+.logo-mark {
+  width: 170px;
+}
