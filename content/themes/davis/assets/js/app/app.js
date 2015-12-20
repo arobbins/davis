@@ -12,6 +12,21 @@
     // Utils.responsifyVideos();
     // Utils.responsifyTables();
 
+  function setHeight() {
+    windowHeight = $(window).innerHeight();
+    $('.video-wrapper').css({
+      'min-height': windowHeight,
+      'height': windowHeight
+    });
+  };
+  setHeight();
+
+  $(window).resize(function() {
+    setHeight();
+  });
+
+
+
   });
 
 })(jQuery);

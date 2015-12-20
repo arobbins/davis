@@ -10,7 +10,7 @@ use Roots\Sage\Wrapper;
 
   <?php get_template_part('templates/head'); ?>
 
-  <body <?php body_class('animated fadeIn'); ?>>
+  <body <?php body_class('l-col animated fadeIn'); ?>>
     <!--[if IE]>
       <div class="alert alert-warning">
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
@@ -24,10 +24,10 @@ use Roots\Sage\Wrapper;
     <?php if (Setup\display_sidebar()) : ?>
 
       <div class="l-row l-row-center l-fit">
-        <main class="l-fit" role="document">
+        <main class="l-box l-fit" role="document">
           <?php include Wrapper\template_path(); ?>
         </main>
-        <aside class="l-col-3 l-sidebar">
+        <aside class="l-box l-box-3 l-sidebar">
           <?php include Wrapper\sidebar_path(); ?>
         </aside>
       </div>
@@ -35,7 +35,9 @@ use Roots\Sage\Wrapper;
     <?php else: ?>
 
       <main class="l-row l-row-center l-fit" role="document">
-        <?php include Wrapper\template_path(); ?>
+        <div class="l-box l-fit">
+          <?php include Wrapper\template_path(); ?>
+        </div>
       </main>
 
     <?php endif; ?>

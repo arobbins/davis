@@ -1,5 +1,2 @@
 <?php use Roots\Sage\Titles; ?>
-
-<div class="l-col l-fit">
-  <h1><?= Titles\title(); ?></h1>
-</div>
+<h1 class="heading"><?= Titles\title(); ?></h1>

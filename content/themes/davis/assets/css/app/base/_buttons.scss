@@ -1,0 +1,37 @@
+.btn,
+.nav-secondary .menu-item a {
+  font-size: $font-btn;
+  padding: 10px 30px;
+  font-weight: bold;
+  transition: background-color 0.08s ease-in;
+}
+
+.btn-s {
+  font-size: $font-btn-s;
+}
+
+.btn-l {
+  font-size: $font-btn-l;
+}
+
+.btn-primary {
+  color: color(white);
+  text-transform: uppercase;
+  background-color: color(blue);
+
+  &:hover {
+    background-color: color(blueDark);
+  }
+}
+
+.btn-secondary,
+.nav-secondary .menu-item a {
+  color: color(white);
+  text-transform: uppercase;
+  border: 2px solid color(white);
+
+  &:hover {
+    background-color: color(blue);
+    border-color: color(blue);
+  }
+}

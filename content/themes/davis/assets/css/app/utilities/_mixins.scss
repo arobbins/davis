@@ -59,22 +59,13 @@
 
 @mixin rowMachine($cols, $margin) {
 
-  @if $cols == 1 {
-    flex: 1 0 auto;
+  @if($cols == 1) {
+    flex: 1;
     max-width: 100%;
 
   } @else {
-    flex: 0 0 ((100% - (($cols - 1) * $margin)) / $cols);
-    max-width: ((100% - (($cols - 1) * $margin)) / $cols);
-
-  }
-
-  &:nth-child(n) {
-    margin-right: $margin;
-  }
-
-  &:nth-child(#{$cols}n) {
-    margin-right: 0;
+    flex: 0 0 calc((100% / #{$cols}) - #{$margin});
+    max-width: calc((100% / #{$cols}) - #{$margin});
   }
 
 }

@@ -1,5 +1,5 @@
 html {
-  font-size: 100%;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -11,13 +11,13 @@ html {
 
 html, body {
   width: 100%;
-  min-height: 100vh;
-  height: 100vh;
+  height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
   line-height: 1.8;
   font-size: $base;
   font-family: $font-primary;
@@ -52,9 +52,4 @@ code, kbd, pre, samp {
 ul, ol, dl {
   padding: 0;
   margin: rem($space-s) 0 rem($space-s) rem($space-s);
-}
-
-.logo,
-.logo-mark {
-  width: 170px;
 }

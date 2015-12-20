@@ -1,40 +1,45 @@
-<?php
 
-  the_content();
+  <?php
 
-  wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']);
+    the_content();
 
-  if(have_rows('components')):
+    wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']);
 
-    while(have_rows('components')) : the_row();
+    if(have_rows('components')): ?>
 
-      //
-      // Generic
-      //
-      if(get_row_layout() == 'component_generic'):
+    <div class="l-row l-row-center">
 
-        get_template_part('components/generic/generic');
+      <?php while(have_rows('components')) : the_row();
 
-      //
-      // Video
-      //
-      elseif(get_row_layout() == 'component_video'):
+        //
+        // Generic
+        //
+        if(get_row_layout() == 'component_generic'):
 
-        //get_template_part('components/video/video');
+          get_template_part('components/generic/generic');
 
-      //
-      // Featured Content
-      //
-      elseif(get_row_layout() == 'component_featured_content'):
+        //
+        // Video
+        //
+        elseif(get_row_layout() == 'component_video'):
 
-        //get_template_part('components/featured-content/featured-content');
+          //get_template_part('components/video/video');
 
-      endif;
+        //
+        // Featured Content
+        //
+        elseif(get_row_layout() == 'component_featured_content'):
 
-    endwhile;
+          //get_template_part('components/featured-content/featured-content');
 
-  else:
+        endif;
 
-  endif;
+      endwhile;
 
-?>
+    else:
+
+    endif; ?>
+      <section>
+        <h1>Hello</h1>
+      </section>
+    </div>

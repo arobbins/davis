@@ -133,7 +133,6 @@ function wp_newsletter_widget() {
 add_action('widgets_init', 'wp_newsletter_widget');
 
 
-
 //
 // Testimonials Widget
 //
@@ -175,8 +174,45 @@ function testimonials_widget() {
 add_action('widgets_init', 'testimonials_widget');
 
 
+//
+// Menu Widget
+//
+class MenuWidget extends WP_Widget {
 
+  function MenuWidget() {
+    // Instantiate the parent object
+    parent::__construct(false, 'Menu');
+  }
 
+  function widget($args, $instance) {
+    // Widget output
+    extract($args);
+    $title = apply_filters('widget_title', $instance['title']);
+
+    require('widgets/menu/menu.php');
+  }
+
+  function update($new_instance, $old_instance) {
+    // Save widget options
+    $instance = $old_instance;
+    $instance['title'] = strip_tags($new_instance['title']);
+
+    return $instance;
+  }
+
+  function form($instance) {
+    // Output admin widget options form
+    $title = esc_attr($instance['title']);
+
+    require('widgets/menu/menu-fields.php');
+  }
+}
+
+function menu_widget() {
+  register_widget('MenuWidget');
+}
+
+add_action('widgets_init', 'menu_widget');
 
 
 

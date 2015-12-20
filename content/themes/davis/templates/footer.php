@@ -1,9 +1,7 @@
-<div class="footer">
+<div class="l-contained footer">
 
   <footer class="l-row l-row-center">
-    <div class="l-col l-fit">
-      <?php dynamic_sidebar('sidebar-footer'); ?>
-    </div>
+    <?php dynamic_sidebar('sidebar-footer'); ?>
   </footer>
 
 </div>

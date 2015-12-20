@@ -1,6 +1,7 @@
 .footer {
-  background-color: color(base);
+  background-color: color(grey);
   width: 100%;
+  padding: 4em 0;
 
   .menu-item {
     display: block;
@@ -25,28 +26,55 @@
 
       }
     }
+  }
 
-    a {
-      font-size: 13px;
-      text-transform: uppercase;
-      font-family: $font-primary;
-      padding: 0 1.5em;
-      width: 100%;
-      display: block;
-      border-right: 1px solid color(grey);
+  .footer-contact-item,
+  a {
+    color: white;
+    font-size: 18px;
+    // text-transform: uppercase;
+    font-family: $font-primary;
+    padding-left: 0;
+    width: 100%;
+    display: block;
+    //border-right: 1px solid color(grey);
 
-      @include respond-to(600) {
-        border-right: none;
-        text-align: center;
-        margin: 0.4em 0;
-        border-bottom: 1px solid color(grey);
-        padding: 0 0 1em 0;
-      }
+    @include respond-to(600) {
+      border-right: none;
+      text-align: center;
+      margin: 0.4em 0;
+      border-bottom: 1px solid color(grey);
+      padding: 0 0 1em 0;
     }
+  }
 
+  a {
+    &:hover {
+      color: color(blue);
+    }
   }
 
 }
+
+.footer-social,
+.footer-contact {
+  list-style: none;
+  margin: 0;
+}
+
+.footer-social-item {
+  float: left;
+
+  a {
+    font-size: $font-m;
+    margin-right: 1em;
+  }
+}
+
+.footer-social {
+  margin-top: 1em;
+}
+
 
 .footer-widgets {
   margin-bottom: 4em;

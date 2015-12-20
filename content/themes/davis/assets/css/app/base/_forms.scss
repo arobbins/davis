@@ -1,17 +1,24 @@
 .form,
 .mc4wp-form {
+
+  .mc4wp-form-fields {
+    label {
+      display: none;
+    }
+  }
+
   input[type="submit"] {
-    background-color: color(darkblue);
-    border: none;
-    padding: rem($space-xs) rem($space-m);
-    font-size: $font-xxxs;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 3px;
-    font-size: $font-xs;
-    font-family: $font-primary;
+    padding: rem($space-s+2) rem($space-m);
+    font-weight: bold;
+    background-color: color(blue);
+    float: left;
+    width: 30%;
+    margin-top: 0;
+    border-radius: 0;
     color: white;
-    margin-top: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-size: $font-base;
 
     &:hover {
       opacity: 0.8;
@@ -25,8 +32,38 @@
 
   input[type="email"] {
     padding: rem($space-xs) rem($space-m);
-    width: 100%;
-    border-radius: 3px;
-    border: 1px solid #c4c4c4;
+    background-color: transparent;
+    float: left;
+    width: 70%;
+    border: 2px solid color(blue);
+    border-radius: 0;
+    color: white;
+    font-size: $font-base;
+    padding: 10px 20px;
   }
+}
+
+.mc4wp-alert,
+.mc4wp-success {
+  color: white;
+
+  p {
+    margin: 0;
+  }
+}
+
+::-webkit-input-placeholder {
+   color: color(blue);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: color(blue);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: color(blue);
+}
+
+:-ms-input-placeholder {
+   color: color(blue);
 }

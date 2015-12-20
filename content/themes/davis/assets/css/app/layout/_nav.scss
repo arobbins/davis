@@ -1,0 +1,41 @@
+.nav-primary {
+  width: 100%;
+
+  a {
+    color: color(white);
+    text-transform: uppercase;
+    font-size: $font-m;
+    font-weight: bold;
+    padding: 1em 1em 1em 2em;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.nav-secondary {
+  width: 100%;
+  margin-top: 1em;
+
+  .menu-item a {
+    color: color(blue);
+    border-color: color(blue);
+
+    &:hover {
+      color: color(white);
+    }
+  }
+}
+
+.menu-primary-navigation-container {
+  width: 100%;
+}
+
+.menu-secondary-navigation-container {
+  width: 80%;
+}

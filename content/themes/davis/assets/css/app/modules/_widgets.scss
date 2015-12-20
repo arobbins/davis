@@ -17,39 +17,6 @@
     padding: 0;
   }
 
-  &:nth-child(even) {
-    @include respond-to(900) {
-      border-right: none;
-      margin-top: rem($space-m);
-    }
-
-    @include respond-to(600) {
-      margin-top: 0;
-    }
-  }
-
-  &:nth-child(odd) {
-    @include respond-to(600) {
-      border-right: none;
-    }
-  }
-
-  &:first-child {
-    padding-left: 0;
-  }
-
-  &:last-child {
-    border-right: 0;
-    padding-right: 0;
-  }
-
-  ul {
-    margin-top: 0;
-  }
-
-  h3 {
-    margin-bottom: 0;
-  }
 }
 
 .widget-social {
@@ -70,7 +37,10 @@
 }
 
 .widget-title {
-  font-size: $font-s;
+  font-size: $font-m;
+  text-transform: uppercase;
+  color: color(lightgrey);
+  margin: 0 0 1em 0;
 
   @include respond-to(600) {
     text-align: center;

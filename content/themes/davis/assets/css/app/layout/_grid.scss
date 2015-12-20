@@ -1,5 +1,5 @@
-$margin: 2%;
-$containerWidth: 1200px;
+$margin: 2em;
+$containerWidth: 1266px;
 $cols-1: 1;
 $cols-2: 2;
 $cols-3: 3;
@@ -16,8 +16,6 @@ $cols-7: 7;
   flex-flow: row wrap;
   max-width: rem($containerWidth);
   width: 100%;
-  // flex: 1;
-  // flex-wrap: wrap;
 
   @include respond-to(500) {
     flex-direction: column;
@@ -25,33 +23,34 @@ $cols-7: 7;
 }
 
 .l-col {
-  // flex: 1 0 auto;
-  border: 1px solid #00a9e0;
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
 
-  &:only-of-type {
-    margin-right: 0;
-  }
+.l-box {
+  max-width: 100%;
+  //border: 1px solid #00a9e0;
+  padding: 0 1em;
 }
 
 
 //
 // Columns
 //
-.l-col-1 {
-  @include rowMachine($cols-1, $margin)
+.l-box-1 {
+  @include rowMachine($cols-1, $margin);
 }
 
-.l-col-2 {
-  @include rowMachine($cols-2, $margin);
+.l-box-2 {
+  flex: 2;
 
   @include respond-to(600) {
     @include rowMachine($cols-1, $margin);
   }
 }
 
-.l-col-3 {
-  @include rowMachine($cols-3, $margin);
+.l-box-3 {
+  flex: 3;
 
   @include respond-to(700) {
     @include rowMachine($cols-2, $margin);
@@ -62,8 +61,8 @@ $cols-7: 7;
   }
 }
 
-.l-col-4 {
-  @include rowMachine($cols-4, $margin);
+.l-box-4 {
+  flex: 4;
 
   @include respond-to(800) {
     @include rowMachine($cols-2, $margin);
@@ -74,8 +73,8 @@ $cols-7: 7;
   }
 }
 
-.l-col-5 {
-  @include rowMachine($cols-5, $margin);
+.l-box-5 {
+  flex: 5;
 
   @include respond-to(800) {
     @include rowMachine($cols-2, $margin);
@@ -86,8 +85,8 @@ $cols-7: 7;
   }
 }
 
-.l-col-6 {
-  @include rowMachine($cols-6, $margin);
+.l-box-6 {
+  flex: 6;
 
   @include respond-to(1000) {
     @include rowMachine($cols-4, $margin);
@@ -106,8 +105,8 @@ $cols-7: 7;
   }
 }
 
-.l-col-7 {
-  @include rowMachine($cols-7, $margin);
+.l-box-7 {
+  flex: 7;
 
   @include respond-to(1100) {
     @include rowMachine($cols-5, $margin);
@@ -128,6 +127,10 @@ $cols-7: 7;
   @include respond-to(500) {
     @include rowMachine($cols-1, $margin);
   }
+}
+
+[class*="l-box"] {
+  margin: 0 1em;
 }
 
 .l-col-reverse {
@@ -194,11 +197,18 @@ $cols-7: 7;
 }
 
 //
-// Misc aignment and spacing
+// Spacing
 //
 .l-fit {
+  flex: 1 0 auto;
+}
+
+.l-fill {
   flex: 1;
-  min-width: 0;
+}
+
+.l-contained {
+  flex: none;
 }
 
 //
@@ -206,11 +216,18 @@ $cols-7: 7;
 //
 .no-flexbox,
 .no-flexboxlegacy {
- .l-row,
- .l-col {
+  .l-row,
+  .l-col {
     display: block;
- }
- .l-col {
+  }
+  .l-col {
     float: left;
- }
+  }
+
+  .l-box {
+    display: block;
+  }
+  .l-box {
+    float: left;
+  }
 }

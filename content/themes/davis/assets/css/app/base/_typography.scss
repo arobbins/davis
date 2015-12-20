@@ -138,47 +138,59 @@ blockquote {
   }
 }
 
-.menu-item {
+// .menu-item {
+//   float: left;
+//   margin-right: 1em;
+
+//   a {
+//     text-decoration: none;
+//     color: color(darkblue);
+//     display: block;
+//     font-size: 15px;
+//     padding: 0 0 0 rem($space-s);
+
+//     &:hover {
+//       // @include dim();
+//       color: color(darkgreen);
+//     }
+//   }
+// }
+
+// .home .menu-item {
+//   a {
+//     color: white;
+//   }
+// }
+
+.icon {
+  font-family: Socialico;
+  display: inline-block;
   float: left;
-  margin-right: 1em;
+  font-size: 65px;
+  color: color(lightgrey);
 
-  a {
-    text-decoration: none;
-    color: color(darkblue);
-    display: block;
-    font-size: 15px;
-    padding: 0 0 0 rem($space-s);
-
-    &:hover {
-      // @include dim();
-      color: color(darkgreen);
-    }
+  &:before {
+    height: 50px;
+    width: 50px;
   }
 }
 
-.home .menu-item {
-  a {
-    color: white;
+.icon-facebook:before {
+  content: "\0066";
+}
+
+.icon-twitter:before {
+  content: "\006C";
+}
+
+.header {
+  .icon {
+    font-size: 50px;
+    margin-left: 20px;
   }
 }
 
-.btn {
-  padding: rem($space-s + 3) rem($space-m + 5);
-  border: 1px solid color(darkblue);
-  color: color(darkblue);
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 3px;
-  font-size: $font-xs;
-  font-family: $font-primary;
-
-  &:hover {
-    color: color(darkblue);
-    @include dim();
-  }
-}
-
-.btn-sm {
-  padding: rem($space-xs) rem($space-m);
-  font-size: $font-xxxs;
+.logo {
+  display: block;
+  width: 260px;
 }
