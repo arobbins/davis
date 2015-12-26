@@ -21,6 +21,7 @@ class ContactWidget extends WP_Widget {
     // Widget output
     extract($args);
     $title = apply_filters('widget_title', $instance['title']);
+    $form = $instance[ 'form' ] ? 'true' : 'false';
 
     require('widgets/contact/contact.php');
   }
@@ -29,13 +30,14 @@ class ContactWidget extends WP_Widget {
     // Save widget options
     $instance = $old_instance;
     $instance['title'] = strip_tags($new_instance['title']);
-
+    $instance['form'] = strip_tags($new_instance['form']);
     return $instance;
   }
 
   function form($instance) {
     // Output admin widget options form
     $title = esc_attr($instance['title']);
+    $form = esc_attr($instance['form']);
 
     require('widgets/contact/contact-fields.php');
   }

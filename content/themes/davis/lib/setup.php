@@ -111,7 +111,8 @@ function assets() {
 
   // TODO: combine with app.min.js in build
 
-  // wp_enqueue_script('slick-js', '//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js', ['jquery'], null, true);
+  wp_enqueue_script('slideout-js', 'https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.11/slideout.min.js', ['jquery'], null, true);
+
   wp_enqueue_script('modernizer', Assets\asset_path('js/vendor/modernizr.min.js'), [], null, true);
   wp_enqueue_script('scripts', Assets\asset_path('js/app.min.js'), ['jquery'], null, true);
 }

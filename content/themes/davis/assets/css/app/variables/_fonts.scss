@@ -51,12 +51,12 @@ $font-primary-fallbacks: Tahoma, Times, sans-serif;
 $font-primary: 'trasandina', $font-primary-fallbacks;
 
 // Font sizes
-$base:        16px;
+$base:        17px;
 $font-base:        16px;
 
 $heading1:    53px;
-$heading2:    30px;
-$heading3:    22px;
+$heading2:    32px;
+$heading3:    24px;
 
 $font-btn: 20px;
 $font-btn-s: 16px;
@@ -73,3 +73,5 @@ $article-more: 20px;
 $post-divider: 16px;
 
 $bio: 15px;
+
+$hoverDarken: 10%;

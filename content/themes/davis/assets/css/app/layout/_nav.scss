@@ -13,8 +13,12 @@
     }
 
     &:hover {
-      opacity: 0.7;
+      color: color(green);
     }
+  }
+
+  @include respond-to(1000) {
+    display: none;
   }
 }
 
@@ -22,12 +26,68 @@
   width: 100%;
   margin-top: 1em;
 
-  .menu-item a {
-    color: color(blue);
-    border-color: color(blue);
+  .menu-item {
+    margin-left: 2em;
 
-    &:hover {
-      color: color(white);
+    a {
+      color: color(blue);
+      border-color: color(blue);
+
+      &:hover {
+        color: color(white);
+      }
+    }
+  }
+
+  @include respond-to(1000) {
+    display: none;
+  }
+}
+
+
+.nav-wrapper {
+  @include respond-to(1000) {
+    display: none;
+  }
+}
+
+
+.nav-mobile {
+  opacity: 0;
+  display: none;
+}
+
+.slideout-open {
+
+  .nav-mobile {
+    opacity: 1;
+  }
+}
+
+.menu-mobile-navigation-container {
+  background-color: white;
+  padding: 0.5em 1em 1em;
+  transition: all 11s ease;
+
+  .menu-item {
+    text-align: left;
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    width: 100%;
+
+    // &:first-child {
+    //    a {
+    //     padding-top: 0;
+    //    }
+    // }
+
+    a {
+      color: color(base);
+      width: 100%;
+      display: block;
+      padding: 0.5em 0;
     }
   }
 }
@@ -38,4 +98,113 @@
 
 .menu-secondary-navigation-container {
   width: 80%;
+  margin-right: 1em;
+}
+
+// .menu-mobile-toggle {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+
+.menu-mobile-toggle {
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  @include respond-to(1000) {
+    display: block;
+    float: right;
+  }
+}
+
+.menu-mobile-toggle:focus {
+  outline: none;
+}
+
+.menu-mobile-toggle span {
+  display: block;
+  position: absolute;
+  top: 28px;
+  left: 10px;
+  right: 18px;
+  height: 4px;
+  background: white;
+  width: 65%;
+}
+
+.menu-mobile-toggle span::before,
+.menu-mobile-toggle span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+}
+
+.menu-mobile-toggle span::before {
+  top: -10px;
+}
+
+.menu-mobile-toggle span::after {
+  bottom: -10px;
+}
+
+.menu-mobile-toggle span {
+  transition: background 0s 0.3s;
+}
+
+.menu-mobile-toggle span::before,
+.menu-mobile-toggle span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.menu-mobile-toggle span::before {
+  transition-property: top, transform;
+}
+
+.menu-mobile-toggle span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.menu-mobile-toggle.is-active {
+  // background-color: #cb0032;
+}
+
+.menu-mobile-toggle.is-active span {
+  background: none;
+}
+
+.menu-mobile-toggle.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-mobile-toggle.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-mobile-toggle.is-active span::before,
+.menu-mobile-toggle.is-active span::after {
+  transition-delay: 0s, 0.3s;
 }

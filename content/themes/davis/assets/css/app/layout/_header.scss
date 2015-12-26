@@ -1,3 +1,64 @@
 .header {
-  margin-top: 1em;
+  min-height: 57vh;
+  position: relative;
+  background-size: cover;
+
+  @include respond-to(900) {
+    min-height: 35vh;
+  }
+}
+
+.header-container {
+  padding-top: 1em;
+
+  .logo-wrapper {
+    @include respond-to(900) {
+      width: 100%;
+      position: relative;
+      top: 10px;
+      left: -15px;
+      max-width: 100%;
+      flex: none;
+    }
+  }
+
+  @include respond-to(1000) {
+    justify-content: flex-start;
+  }
+
+  @include respond-to(900) {
+    width: 80%;
+    float: left;
+    padding-top: 0;
+  }
+}
+
+.slideout-menu {
+  position: fixed;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 256px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.slideout-panel {
+  position:relative;
+  z-index: 1;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+  right: 0;
+
 }

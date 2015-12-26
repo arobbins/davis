@@ -42,7 +42,7 @@ $cols-7: 7;
 }
 
 .l-box-2 {
-  flex: 2;
+  @include rowMachine($cols-2, $margin);
 
   @include respond-to(600) {
     @include rowMachine($cols-1, $margin);
@@ -50,7 +50,7 @@ $cols-7: 7;
 }
 
 .l-box-3 {
-  flex: 3;
+  @include rowMachine($cols-3, $margin);
 
   @include respond-to(700) {
     @include rowMachine($cols-2, $margin);
@@ -62,7 +62,7 @@ $cols-7: 7;
 }
 
 .l-box-4 {
-  flex: 4;
+  @include rowMachine($cols-4, $margin);
 
   @include respond-to(800) {
     @include rowMachine($cols-2, $margin);
@@ -74,7 +74,7 @@ $cols-7: 7;
 }
 
 .l-box-5 {
-  flex: 5;
+  @include rowMachine($cols-5, $margin);
 
   @include respond-to(800) {
     @include rowMachine($cols-2, $margin);
@@ -86,7 +86,7 @@ $cols-7: 7;
 }
 
 .l-box-6 {
-  flex: 6;
+  @include rowMachine($cols-6, $margin);
 
   @include respond-to(1000) {
     @include rowMachine($cols-4, $margin);
@@ -106,7 +106,7 @@ $cols-7: 7;
 }
 
 .l-box-7 {
-  flex: 7;
+  @include rowMachine($cols-7, $margin);
 
   @include respond-to(1100) {
     @include rowMachine($cols-5, $margin);
