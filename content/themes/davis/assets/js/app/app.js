@@ -60,8 +60,6 @@
           $('.nav-mobile').fadeIn();
         }
 
-
-
         (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
       });
     }

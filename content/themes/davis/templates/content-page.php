@@ -32,6 +32,27 @@
 
           //get_template_part('components/featured-content/featured-content');
 
+        //
+        // Testimonials
+        //
+        elseif(get_row_layout() == 'component_testimonials'):
+
+          get_template_part('components/testimonials/testimonials');
+
+        //
+        // Services
+        //
+        elseif(get_row_layout() == 'component_services'):
+
+          get_template_part('components/services/services');
+
+        //
+        // Latest
+        //
+        elseif(get_row_layout() == 'component_latest'):
+
+          get_template_part('components/latest/latest');
+
         endif;
 
       endwhile;
