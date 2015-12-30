@@ -31,6 +31,9 @@ use Roots\Sage\Wrapper;
       <?php
         do_action('get_header');
         get_template_part('templates/header');
+
+        $content = get_the_content();
+        global $post;
       ?>
 
       <?php if (Setup\display_sidebar()) : ?>
@@ -46,11 +49,19 @@ use Roots\Sage\Wrapper;
 
       <?php else: ?>
 
-        <main class="l-row l-row-center l-fit main" role="document">
-          <div class="l-box l-fit">
-            <?php include Wrapper\template_path(); ?>
-          </div>
-        </main>
+        <?php
+
+          if(!empty($content)) { ?>
+
+            <main class="l-row l-row-center l-fit main" role="document">
+              <div class="l-box l-fit">
+                <?php include Wrapper\template_path(); ?>
+              </div>
+            </main>
+
+          <?php }?>
+
+          <?php get_template_part('templates/content-components'); ?>
 
       <?php endif; ?>
 

@@ -8,6 +8,46 @@
 */
 
 /*
+  CPT: Services
+*/
+function custom_post_type_services() {
+
+  $labels = array(
+    'name'                => _x('Services', 'Post Type General Name', 'text_domain'),
+    'singular_name'       => _x('Service', 'Post Type Singular Name', 'text_domain'),
+    'menu_name'           => __('Services', 'text_domain'),
+    'parent_item_colon'   => __('Parent Item:', 'text_domain'),
+    'new_item'            => __('Add New Service', 'text_domain'),
+    'edit_item'           => __('Edit Service', 'text_domain'),
+    'not_found'           => __('No Service found', 'text_domain'),
+    'not_found_in_trash'  => __('No Service found in trash', 'text_domain')
+  );
+
+  $args = array(
+    'label'               => __('services', 'text_domain'),
+    'description'         => __('Custom Post Type for Services', 'text_domain'),
+    'labels'              => $labels,
+    'supports'            => array('title'),
+    'taxonomies'          => array(),
+    'hierarchical'        => false,
+    'public'              => false,
+    'show_ui'             => true,
+    'show_in_menu'        => true,
+    'menu_position'       => 100,
+    'menu_icon'           => 'dashicons-hammer',
+    'show_in_admin_bar'   => true,
+    'can_export'          => true,
+    'has_archive'         => false,
+    'exclude_from_search' => true,
+    'publicly_queryable'  => true,
+    'capability_type'     => 'page'
+  );
+
+  register_post_type('services', $args);
+
+}
+
+/*
   CPT: Staff
 */
 function custom_post_type_staff() {
@@ -135,5 +175,6 @@ function custom_post_type_testimonials() {
 add_action('init', 'custom_post_type_staff', 0);
 add_action('init', 'custom_post_type_clients', 0);
 add_action('init', 'custom_post_type_testimonials', 0);
+add_action('init', 'custom_post_type_services', 0);
 
 ?>
