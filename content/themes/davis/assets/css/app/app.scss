@@ -36,11 +36,14 @@ Author email:   arobbins@simpleblend.net
 @import "layout/nav";
 
 // Modules
+@import "modules/components";
 @import "modules/widgets";
 @import "modules/article";
 @import "modules/author";
 @import "modules/slider";
 @import "modules/faqs";
+@import "modules/cards";
+@import "modules/testimonials";
 
 // State
 @import "state/state";

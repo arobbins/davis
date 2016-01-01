@@ -16,10 +16,6 @@ $cols-7: 7;
   flex-flow: row wrap;
   max-width: rem($containerWidth);
   width: 100%;
-
-  @include respond-to(500) {
-    flex-direction: column;
-  }
 }
 
 .l-col {
@@ -52,11 +48,11 @@ $cols-7: 7;
 .l-box-3 {
   @include rowMachine($cols-3, $margin);
 
-  @include respond-to(700) {
+  @include respond-to(900) {
     @include rowMachine($cols-2, $margin);
   }
 
-  @include respond-to(500) {
+  @include respond-to(600) {
     @include rowMachine($cols-1, $margin);
   }
 }
@@ -130,7 +126,11 @@ $cols-7: 7;
 }
 
 [class*="l-box"] {
-  margin: 0 1em;
+  margin: 1em;
+
+  @include respond-to(600) {
+    margin: 0.5em 1em;
+  }
 }
 
 .l-col-reverse {

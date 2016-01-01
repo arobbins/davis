@@ -1,0 +1,55 @@
+.testimonial,
+.testimonial-attribution {
+  text-align: center;
+}
+
+.testimonial-attribution {
+  font-size: 20px;
+  color: color(lightgrey);
+}
+
+.testimonial {
+  font-size: rem(32px);
+  line-height: 1.4;
+  color: color(green);
+  position: relative;
+  width: 80%;
+
+  @include respond-to(600) {
+    font-size: rem(24px);
+  }
+
+  &:before,
+  &:after {
+    font-size: 50px;
+    position: absolute;
+    font-family: FontAwesome;
+  }
+
+  &:before {
+    content: '\f10d';
+    top: -10px;
+    left: -60px;
+
+    @include respond-to(800) {
+      top: -39px;
+      left: 45%;
+    }
+
+  }
+
+  &:after {
+    content: '\f10e';
+    bottom: -10px;
+    right: -60px;
+
+    @include respond-to(800) {
+      display: none;
+    }
+  }
+
+  p {
+    margin-bottom: 0.5em;
+  }
+
+}

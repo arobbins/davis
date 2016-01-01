@@ -107,6 +107,7 @@
 }
 
 .sidebar {
+  border-left: 1px solid color(offwhite);
 
   @include respond-to(900) {
     padding: rem($space-m*2) 0;
@@ -231,10 +232,4 @@
 
 .byline-author {
   margin: 0 0 0 5px;
-}
-
-.component {
-  text-align: left;
-  width: 100%;
-  padding: 3em 0;
 }

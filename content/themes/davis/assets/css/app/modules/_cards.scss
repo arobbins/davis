@@ -1,0 +1,55 @@
+.card {
+  background-color: white;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.card-primary {
+  border-top: 11px solid color(red);
+  padding: 0 2em 2em 2em;
+
+  .btn {
+    text-align: center;
+  }
+}
+
+.card-secondary {
+  padding: 0;
+
+  .card-heading,
+  .card-description {
+    padding: 0 20px;
+  }
+}
+
+.card-heading-link {
+  &:hover {
+    color: darken(color(red), $hoverDarken);
+
+    h2 {
+      color: darken(color(red), $hoverDarken);
+    }
+  }
+}
+
+.card-heading {
+  color: color(red);
+  margin: 10px 0 0 0;
+
+  @include respond-to(1100) {
+    font-size: rem(22px);
+  }
+
+  .fa {
+    font-size: 50px;
+
+    @include respond-to(1100) {
+      font-size: 40px;
+    }
+
+  }
+}
+
+.card-meta {
+  padding: 0 20px;
+}

@@ -99,7 +99,7 @@ function display_sidebar() {
  */
 function assets() {
 
-  wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, null);
+  wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', false, null);
   wp_enqueue_style('animate', Assets\asset_path('css/vendor/animate.min.css'));
 
   wp_enqueue_style('styles', Assets\asset_path('css/app.min.css'), false, null);

@@ -1,7 +1,15 @@
-<section class="component" style="background-color: #<?php the_sub_field('background_color', $post->ID); ?>">
-  <div class="l-row l-row-center component-latest">
+<?php if(get_sub_field('background_pattern', $post->ID)) { ?>
+  <section class="component component-latest" style="background-image: url(<?php the_sub_field('background_pattern_image', $post->ID); ?>);">
+<?php } else { ?>
+  <section class="component component-latest" style="background-color: #<?php the_sub_field('background_color', $post->ID); ?>">
+<?php } ?>
 
-    <h1><?php the_sub_field('component_latest_heading', $post->ID); ?></h1>
+  <div class="l-row l-row-center">
+
+    <h1 class="component-heading component-latest-heading">
+      <?php the_sub_field('heading', $post->ID); ?>
+    </h1>
+
     <div class="l-row l-row-center">
       <?php
         $loop = new WP_Query(array( 'post_type' => 'post', 'posts_per_page' => 3 ));
@@ -14,10 +22,18 @@
 
         ?>
 
-          <div class="l-box l-box-3">
-            <img src="<?php echo $thumb_url; ?>">
-            <h2><?php the_title(); ?></h2>
-            <p><?php the_excerpt(); ?></p>
+          <div class="l-box l-box-3 card card-secondary">
+            <img src="<?php echo $thumb_url; ?>" class="card-image">
+
+            <a href="<?php the_permalink(); ?>" class="card-heading-link">
+              <h2 class="card-heading"><?php the_title(); ?></h2>
+            </a>
+
+            <div class="card-meta">
+              <?php get_template_part('templates/entry-meta'); ?>
+            </div>
+
+            <div class="card-description"><?php the_excerpt(); ?></div>
           </div>
 
         <?php endwhile;

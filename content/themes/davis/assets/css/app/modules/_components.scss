@@ -1,0 +1,23 @@
+.component {
+  text-align: left;
+  width: 100%;
+  padding: 3em 0;
+}
+
+.component-heading {
+  margin-bottom: 1em;
+
+  @include respond-to(600) {
+    font-size: rem($base*2);
+  }
+}
+
+.component-latest {
+  background-size: contain;
+  background-image: repeat;
+  background-color: rgba(88, 186, 71, 0.9);
+
+  .component-heading {
+    color: white;
+  }
+}
