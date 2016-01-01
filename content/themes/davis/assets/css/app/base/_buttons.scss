@@ -1,5 +1,8 @@
 .btn,
+div.gform_wrapper .gform_footer input.button,
+div.gform_wrapper .gform_footer input[type=submit],
 .nav-secondary .menu-item a {
+  border: none;
   font-size: $font-btn;
   padding: 10px 30px;
   font-weight: bold;
@@ -12,7 +15,9 @@
 
 }
 
-.btn-s {
+.btn-s,
+div.gform_wrapper .gform_footer input.button,
+div.gform_wrapper .gform_footer input[type=submit] {
   font-size: $font-btn-s;
 }
 
@@ -24,7 +29,9 @@
   }
 }
 
-.btn-primary {
+.btn-primary,
+div.gform_wrapper .gform_footer input.button,
+div.gform_wrapper .gform_footer input[type=submit] {
   color: color(white);
   text-transform: uppercase;
   background-color: color(blue);

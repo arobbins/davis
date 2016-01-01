@@ -5,6 +5,10 @@
   justify-content: flex-start;
   width: 100%;
 
+  &:first-of-type {
+    margin-top: 0;
+  }
+
   @include respond-to(900) {
     width: 50%;
   }
