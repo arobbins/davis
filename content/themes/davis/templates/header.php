@@ -71,7 +71,11 @@
 
   <?php } else { ?>
 
-  <header class="header" style="background-image: url('<?php the_field('marquee_image', $id); ?>')">
+    <?php if(get_field('marquee_image', $id)) { ?>
+      <header class="header" style="background-image: url('<?php the_field('marquee_image', $id); ?>')">
+    <?php } else { ?>
+      <header class="header" style="background-image: url('<?php the_field('global_default_header_image', 'option'); ?>')">
+    <?php } ?>
 
   <?php } ?>
 

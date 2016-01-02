@@ -53,19 +53,19 @@ function custom_post_type_services() {
 function custom_post_type_staff() {
 
   $labels = array(
-    'name'                => _x('Staff', 'Post Type General Name', 'text_domain'),
-    'singular_name'       => _x('Staff Member', 'Post Type Singular Name', 'text_domain'),
-    'menu_name'           => __('Staff', 'text_domain'),
+    'name'                => _x('Team', 'Post Type General Name', 'text_domain'),
+    'singular_name'       => _x('Team Member', 'Post Type Singular Name', 'text_domain'),
+    'menu_name'           => __('Team', 'text_domain'),
     'parent_item_colon'   => __('Parent Item:', 'text_domain'),
-    'new_item'            => __('Add New Staff Member', 'text_domain'),
-    'edit_item'           => __('Edit Staff Member', 'text_domain'),
-    'not_found'           => __('No Staff Member found', 'text_domain'),
-    'not_found_in_trash'  => __('No Staff Member found in trash', 'text_domain')
+    'new_item'            => __('Add New Team Member', 'text_domain'),
+    'edit_item'           => __('Edit Team Member', 'text_domain'),
+    'not_found'           => __('No Team Member found', 'text_domain'),
+    'not_found_in_trash'  => __('No Team Member found in trash', 'text_domain')
   );
 
   $args = array(
     'label'               => __('staff', 'text_domain'),
-    'description'         => __('Custom Post Type for Staff', 'text_domain'),
+    'description'         => __('Custom Post Type for Team', 'text_domain'),
     'labels'              => $labels,
     'supports'            => array('title'),
     'taxonomies'          => array(),

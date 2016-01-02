@@ -59,7 +59,13 @@ use Roots\Sage\Wrapper;
               </div>
             </main>
 
-          <?php }?>
+          <?php } else {
+
+            if(is_404()) {
+              get_template_part('404');
+            }
+
+          } ?>
 
           <?php get_template_part('templates/content-components'); ?>
 

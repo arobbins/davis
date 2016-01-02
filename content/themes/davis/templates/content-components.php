@@ -40,6 +40,20 @@
         get_template_part('components/services/services');
 
       //
+      // Team
+      //
+      elseif(get_row_layout() == 'component_team'):
+
+        get_template_part('components/team/team');
+
+      //
+      // Clients
+      //
+      elseif(get_row_layout() == 'component_clients'):
+
+        get_template_part('components/clients/clients');
+
+      //
       // Latest
       //
       elseif(get_row_layout() == 'component_latest'):

@@ -1,0 +1,37 @@
+.team-member {
+  margin-bottom: 2em;
+
+  @include respond-to(600) {
+    margin-bottom: 3em;
+  }
+}
+
+.team-image {
+  width: 64%;
+  margin: 0 auto 1em auto;
+
+  @include respond-to(600) {
+    width: 34%;
+  }
+
+  @include respond-to(400) {
+    width: 75%;
+  }
+}
+
+.team-role,
+.team-name {
+  margin: 0;
+  text-align: center;
+}
+
+.team-social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team-social-link {
+  font-size: rem(26px);
+  margin: 0 0.5em;
+}

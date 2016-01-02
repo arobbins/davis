@@ -1,7 +1,8 @@
 .btn,
 div.gform_wrapper .gform_footer input.button,
 div.gform_wrapper .gform_footer input[type=submit],
-.nav-secondary .menu-item a {
+.nav-secondary .menu-item a,
+.search-submit {
   border: none;
   font-size: $font-btn;
   padding: 10px 30px;
@@ -30,7 +31,8 @@ div.gform_wrapper .gform_footer input[type=submit] {
 
 .btn-primary,
 div.gform_wrapper .gform_footer input.button,
-div.gform_wrapper .gform_footer input[type=submit] {
+div.gform_wrapper .gform_footer input[type=submit],
+.search-submit {
   color: color(white);
   text-transform: uppercase;
   background-color: color(blue);

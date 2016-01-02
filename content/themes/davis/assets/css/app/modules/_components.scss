@@ -21,3 +21,10 @@
     color: white;
   }
 }
+
+.main + .component {
+  &:only-of-type {
+    padding-top: 0;
+    margin-top: -3em;
+  }
+}

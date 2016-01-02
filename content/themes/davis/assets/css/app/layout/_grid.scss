@@ -1,5 +1,5 @@
 $margin: 2em;
-$containerWidth: 1266px;
+$containerWidth: 1200px;
 $cols-1: 1;
 $cols-2: 2;
 $cols-3: 3;
@@ -136,6 +136,12 @@ $cols-7: 7;
     margin: 0.5em 1em;
   }
 }
+
+// .l-gutter-m {
+//   .l-box {
+//     padding: 0 2em;
+//   }
+// }
 
 .l-col-reverse {
   flex-direction: column-reverse;
