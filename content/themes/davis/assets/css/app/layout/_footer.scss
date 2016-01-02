@@ -59,12 +59,17 @@
     }
   }
 
+  .widget {
+    margin-top: 0;
+  }
+
 }
 
 .footer-social,
 .footer-contact {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .footer-social-item {

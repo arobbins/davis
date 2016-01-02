@@ -1,9 +1,12 @@
 .main {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 2em auto;
+
+  @include respond-to(900) {
+    flex-direction: column;
+  }
 
   h2:first-of-type {
-    margin-top: 0;
+    margin: 0;
   }
 }
 
@@ -18,10 +21,12 @@
     padding: rem($space-m*2) 0;
     margin: rem($space-l) 0;
     border-top: 1px solid #d8dbdf;
+    max-width: 100%;
   }
 
   @include respond-to(800) {
     flex: 0 0 auto;
+    margin-top: 0;
   }
 
   @include respond-to(600) {
@@ -33,6 +38,7 @@
 
 .post {
   padding-bottom: rem(space-m);
+  margin-bottom: 2em;
 
   @include respond-to(800) {
     padding-right: 0;
@@ -144,11 +150,11 @@
   width: 70%;
   text-align: center;
   left: 50%;
-  top: 58%;
+  top: 62%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  font-size: 68px;
+  font-size: 62px;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 
@@ -163,7 +169,7 @@
 }
 
 .marquee-text h1 {
-  font-size: 68px;
+  font-size: 62px;
 
   @include respond-to(600) {
     font-size: 42px;
@@ -210,4 +216,9 @@
 
 .byline-author {
   margin: 0 0 0 5px;
+}
+
+.byline {
+  font-weight: bold;
+  font-size: rem(15px);
 }

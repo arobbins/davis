@@ -126,7 +126,11 @@ $cols-7: 7;
 }
 
 [class*="l-box"] {
-  margin: 1em;
+  margin: 0 1em;
+
+  @include respond-to(900) {
+    margin: 0.5em;
+  }
 
   @include respond-to(600) {
     margin: 0.5em 1em;

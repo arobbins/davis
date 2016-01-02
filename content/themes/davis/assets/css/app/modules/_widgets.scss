@@ -3,23 +3,75 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
+  margin-bottom: 2em;
 
   &:first-of-type {
     margin-top: 0;
   }
 
-  @include respond-to(900) {
-    width: 50%;
+  .testimonial,
+  .testimonial-attribution {
+    text-align: left;
   }
 
-  @include respond-to(600) {
-    width: 100%;
-    margin: 0 0 rem($space-l) 0;
-    padding: 0;
+  .testimonial-attribution {
+    font-size: 16px;
+    color: color(lightgrey);
+    margin-left: 60px;
+
+    // @include respond-to(900) {
+    //   margin-left: 60px;
+    // }
+  }
+
+  .testimonial {
+    font-size: rem(24px);
+    line-height: 1.4;
+    color: color(green);
+    position: relative;
+    margin-left: 50px;
+
+    @include respond-to(1100) {
+      font-size: rem(20px);
+    }
+
+    &:before,
+    &:after {
+      font-size: 40px;
+      position: absolute;
+      font-family: FontAwesome;
+    }
+
+    &:before {
+      content: '\f10d';
+      top: 0;
+      left: -50px;
+
+      @include respond-to(900) {
+        top: -10px;
+      }
+
+    }
+
+    &:after {
+      display: none;
+    }
+
+    p {
+      margin: 0 0 0 10px;
+    }
+
   }
 
 }
+
+
+.widget-related-news {
+  @include respond-to(900) {
+    margin: rem($space-xl) 1em;
+  }
+}
+
 
 .widget-social {
   @include respond-to(600) {
@@ -27,16 +79,16 @@
   }
 }
 
-.widget-signature {
 
+.widget-signature {
   img {
     @include respond-to(900) {
       max-width: 70%;
       margin: 0 auto;
     }
   }
-
 }
+
 
 .widget-title {
   font-size: $font-m;
@@ -73,3 +125,58 @@
     color: color(darkgreen);
   }
 }
+
+
+
+
+
+
+.widget-title-link {
+  border-bottom: 1px solid color(lightgrey);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  h2 {
+    font-size: $font-s;
+    text-transform: capitalize;
+    color: color(red);
+  }
+
+  &:hover {
+    text-decoration: none;
+    h2 {
+      text-decoration: none;
+      color: darken(color(red), $hoverDarken);
+    }
+  }
+}
+
+.widget-snippet {
+  margin-top: 0;
+  font-size: $font-xs;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

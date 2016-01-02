@@ -62,7 +62,11 @@ article {
       text-decoration: underline;
     }
   }
+}
 
+.entry-content p:first-child,
+.entry-summary p:first-child {
+  margin-top: 0.5em;
 }
 
 h1 {
