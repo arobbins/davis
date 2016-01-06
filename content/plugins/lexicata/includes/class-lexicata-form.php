@@ -324,7 +324,7 @@ class Lexicata_Form {
     /**
 	 * Generate the contact form html
 	 * @access  public
-	 * @since   1.0.6
+	 * @since   1.0.7
 	 * @return  html contact form
 	 */
     public function contact_form_submit_logic()
@@ -378,6 +378,29 @@ class Lexicata_Form {
                 if($this->submit_lead($lead))
                 {
                     echo "<h3 class='lf_success'>".get_option('lf_successful_submit_message')."</h3>";
+
+                    if(get_option('lf_google_analytics_id'))
+                    {
+                        echo "
+                        <!-- Google Analytics -->
+                        <script>
+                        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                        ga('create', '".get_option('lf_google_analytics_id')."', 'auto');
+                        ga('send', 'event', {
+                          'eventCategory': 'LexicataForm',
+                          'eventAction': 'SuccessfulSubmission',
+                          //'eventLabel': 'Label',
+                          //'eventValue': 55
+                        });
+                        </script>
+                        <!-- End Google Analytics -->
+                        ";
+                    }
+
                     unset($_POST);
                 }
                 else

@@ -1,5 +1,6 @@
 .form,
-.mc4wp-form {
+.mc4wp-form,
+#mc-embedded-subscribe-form {
 
   .mc4wp-form-fields {
     label {
@@ -103,15 +104,28 @@ div.gform_wrapper {
 .gform_wrapper .gform_body .ginput_complex input[type=text],
 .gform_wrapper .gform_body .ginput_complex input[type=url],
 .gform_wrapper .gform_body textarea.medium,
-input[type=search] {
+input[type=search],
+#lf_form_container input,
+#lf_form_container textarea {
   width: 100%;
   border: 1px solid color(lightgrey);
   padding: 1em;
   color: color(base);
   margin-bottom: 1em;
+  font-size: $font-xxs;
 }
 
 .gform_wrapper .gform_body + .gform_footer {
   margin-top: 0;
   padding-top: 0;
+}
+
+#lf_form_container {
+ .button_text {
+  width: auto;
+  &:hover {
+   background-color: color(blueDark) !important;
+   color: color(white) !important;
+  }
+ }
 }

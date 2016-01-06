@@ -2,7 +2,8 @@
 div.gform_wrapper .gform_footer input.button,
 div.gform_wrapper .gform_footer input[type=submit],
 .nav-secondary .menu-item a,
-.search-submit {
+.search-submit,
+#lf_form_container .button_text {
   border: none;
   font-size: $font-btn;
   padding: 10px 30px;

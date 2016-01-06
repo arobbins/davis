@@ -164,6 +164,14 @@ class Lexicata_Form_Settings {
 					'type'			=> 'text',
 					'default'		=> 'Thank you! Your inquiry has been successfully submitted',
 					'placeholder'	=> __( 'e.g. Thanks! We will contact you soon!', 'lexicata-form' )
+				),
+                array(
+					'id' 			=> 'google_analytics_id',
+					'label'			=> __( 'Google Analytics ID' , 'lexicata-form' ),
+					'description'	=> __( 'Optional; supply your Google Analytics ID if you want sucessful submissions to be submitted as an GA event' ),
+					'type'			=> 'text',
+					//'default'		=> '',
+					'placeholder'	=> __( 'e.g. UA-XXXXXXXX-Y', 'lexicata-form' )
 				)
             )
 		);

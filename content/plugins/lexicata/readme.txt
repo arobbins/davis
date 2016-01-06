@@ -3,7 +3,7 @@ Contributors: lexicata, One-400.com
 Tags: contact form, CRM, Lexicata, law firm, lawyer, contact, lead tracking, wordpress, plugin
 Requires at least: 3.9
 Tested up to: 4.3.1
-Stable tag: 1.2.1
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,10 @@ Lexicata is built exclusively for law firms, and this plugin is intended to be u
 No, you must be a Lexicata user to use the plugin.
 
 == Changelog ==
+= 1.0.7 =
+* 2015-12-29
+* Added Google Analytics event tracking for successful form submission
+
 = 1.0.6 =
 * 2015-11-18
 * Fixed several bugs; main one being single quotes were being double escaped

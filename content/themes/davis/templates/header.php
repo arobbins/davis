@@ -53,8 +53,8 @@
     </div>
 
     <div class="marquee-text">
-      <h1 class="">Posuere laborum elementum maxime ullamcorper eaque.</h1>
-      <a href="" class="btn btn-l btn-primary">Learn more</a>
+      <h1 class=""><?php the_field('global_homepage_marquee_copy', 'option'); ?></h1>
+      <a href="<?php the_field('global_homepage_marquee_cta_link', 'option'); ?>" class="btn btn-l btn-primary"><?php the_field('global_homepage_marquee_cta_copy', 'option'); ?></a>
     </div>
 
     <button class="menu-mobile-toggle">
