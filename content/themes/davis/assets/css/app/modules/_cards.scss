@@ -6,7 +6,12 @@
 
 .card-primary {
   border-top: 11px solid color(red);
-  padding: 0 2em 2em 2em;
+  // padding: 0 2em 2em 2em;
+  padding-top: 0;
+
+  .card-description > p {
+     margin-top: 0.5em;
+ }
 
   .btn {
     text-align: center;
@@ -35,16 +40,17 @@
 .card-heading {
   color: color(red);
   margin: 10px 0 0 0;
+  font-size: rem(22px);
 
   @include respond-to(1100) {
-    font-size: rem(22px);
+    font-size: rem(20px);
   }
 
   .fa {
-    font-size: 50px;
+    font-size: rem(40px);
 
     @include respond-to(1100) {
-      font-size: 40px;
+      font-size: rem(34px);
     }
 
   }

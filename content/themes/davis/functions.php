@@ -34,3 +34,19 @@ function custom_excerpt_length($length) {
   return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
+
+//
+// Modifying the comments form
+//
+function custom_comments($comment, $args, $depth) {
+   include(locate_template('templates/comments-custom.php'));
+}
+
+//
+// Modifying the comment reply links
+//
+function replace_reply_link_class($class){
+   $class = str_replace("class='comment-reply-link", "class='btn btn-primary btn-s", $class);
+   return $class;
+}
+add_filter('comment_reply_link', 'replace_reply_link_class');

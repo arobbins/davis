@@ -4,54 +4,63 @@ div.gform_wrapper .gform_footer input[type=submit],
 .nav-secondary .menu-item a,
 .search-submit,
 #lf_form_container .button_text {
-  border: none;
-  font-size: $font-btn;
-  padding: 10px 30px;
-  font-weight: bold;
+   border: none;
+   font-size: $font-btn;
+   padding: 10px 30px;
+   font-weight: bold;
 
-  @include respond-to(600) {
-    font-size: rem($base);
-    width: 100%;
-  }
+   @include respond-to(600) {
+      font-size: rem($base);
+      width: 100%;
+   }
 
 }
 
 .btn-s,
 div.gform_wrapper .gform_footer input.button,
 div.gform_wrapper .gform_footer input[type=submit] {
-  font-size: $font-btn-s;
+   font-size: $font-btn-s;
 }
 
 .btn-l {
-  font-size: $font-btn-l;
+   font-size: $font-btn-l;
 
-  @include respond-to(600) {
-    padding: 10px 30px;
-  }
+   @include respond-to(600) {
+      padding: 10px 30px;
+   }
 }
 
 .btn-primary,
 div.gform_wrapper .gform_footer input.button,
 div.gform_wrapper .gform_footer input[type=submit],
 .search-submit {
-  color: color(white);
-  text-transform: uppercase;
-  background-color: color(blue);
+   color: color(white);
+   text-transform: uppercase;
+   background-color: color(blue);
 
-  &:hover {
-    background-color: color(blueDark);
-    color: color(white);
-  }
+   &:hover {
+      background-color: color(blueDark);
+      color: color(white);
+   }
 }
 
 .btn-secondary,
 .nav-secondary .menu-item a {
-  color: color(white);
-  text-transform: uppercase;
-  border: 2px solid color(white);
+   color: color(white);
+   text-transform: uppercase;
+   border: 2px solid color(white);
 
-  &:hover {
-    background-color: color(blue);
-    border-color: color(blue);
-  }
+   &:hover {
+      background-color: color(blue);
+      border-color: color(blue);
+   }
+}
+
+
+article a:hover {
+   text-decoration: none;
+}
+
+.reply .btn {
+   font-size: $font-xxs;
 }

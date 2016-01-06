@@ -1,6 +1,7 @@
 .form,
 .mc4wp-form,
-#mc-embedded-subscribe-form {
+#mc-embedded-subscribe-form,
+#commentform {
 
   .mc4wp-form-fields {
     label {
@@ -106,7 +107,10 @@ div.gform_wrapper {
 .gform_wrapper .gform_body textarea.medium,
 input[type=search],
 #lf_form_container input,
-#lf_form_container textarea {
+#lf_form_container textarea,
+#commentform input,
+#commentform textarea,
+#commentform input[type=email] {
   width: 100%;
   border: 1px solid color(lightgrey);
   padding: 1em;
@@ -128,4 +132,10 @@ input[type=search],
    color: color(white) !important;
   }
  }
+}
+
+.comment-list {
+   margin-left: 0;
+   padding-left: 0;
+   list-style: none;
 }

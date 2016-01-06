@@ -14,7 +14,10 @@
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
           <div class="l-box l-box-3 l-col l-row-justify card card-primary">
-            <h2 class="l-row l-row-justify l-col-center card-heading"><?php the_field('service_name', get_the_id()); ?> <i class="fa fa-<?php the_field('service_icon', get_the_id()); ?>"></i></h2>
+            <h2 class="l-row l-row-justify l-col-center card-heading">
+               <span class="l-fill"><?php the_field('service_name', get_the_id()); ?> </span>
+               <i class="fa fa-<?php the_field('service_icon', get_the_id()); ?>"></i>
+            </h2>
             <div class="card-description"><?php the_field('service_description', get_the_id()); ?></div>
             <a href="<?php the_field('service_page', get_the_id()); ?>" class="btn btn-primary">Learn more</a>
           </div>

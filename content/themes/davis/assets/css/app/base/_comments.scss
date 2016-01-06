@@ -1,0 +1,52 @@
+.comments {
+   border-top: 1px solid color(offwhite);
+   padding-top: 1em;
+   margin-top: 2em;
+}
+
+.comment {
+   margin: 3em 0;
+   margin: 2em 0;
+   border-bottom: 1px solid color(offwhite);
+   padding-bottom: 2em;
+
+   .edit-link {
+      width: 100%;
+      text-align: right;
+   }
+}
+
+.children {
+   list-style: none;
+   margin-left: 2em;
+   border-bottom: 0;
+   margin-top: 3em;
+
+   .comment:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+   }
+}
+
+.comment-meta .comment-author {
+   margin-left: 0;
+}
+
+.comment-author-name {
+   font-size: rem(17px);
+   margin-left: 1em;
+   margin-right: 5px;
+}
+
+.comment-author-name-says {
+   font-size: rem(17px);
+}
+
+.comment-metadata-date {
+   width: 100%;
+   text-align: right;
+}
+
+.comment-respond {
+   margin: 3em 0;
+}
