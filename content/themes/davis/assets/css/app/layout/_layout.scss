@@ -173,14 +173,18 @@
 .home .marquee-text {
   top: 50%;
 
-  h1 {
-     font-size: 36px;
-     margin-bottom: 1em;
- }
-
   @include respond-to(800) {
     width: 90%;
   }
+
+  @include respond-to(600) {
+   h1 {
+      font-size: 36px;
+      margin-bottom: 1em;
+   }
+  }
+
+
 }
 
 .video-cta {
