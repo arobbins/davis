@@ -67,6 +67,7 @@
   } @else {
     flex: 0 0 calc((100% / #{$cols}) - #{$margin});
     max-width: calc((100% / #{$cols}) - #{$margin});
+    width: calc((100% / #{$cols}) - #{$margin});
   }
 
 }

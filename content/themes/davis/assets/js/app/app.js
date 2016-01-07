@@ -31,7 +31,8 @@
       'menu': document.getElementById('menu'),
       'padding': 256,
       'tolerance': 70,
-      'side': 'right'
+      'side': 'right',
+      'touch': false
     });
 
     document.querySelector('.menu-mobile-toggle').addEventListener('click', function() {

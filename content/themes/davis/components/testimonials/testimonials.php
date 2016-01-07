@@ -1,6 +1,6 @@
 <section class="component component-testimonials" style="background-color: #<?php the_sub_field('background_color', $post->ID); ?>">
   <div class="l-row l-row-center">
-    <div class="l-col l-col-center">
+    <div class="l-col l-col-center l-fill">
       <?php
         $loop = new WP_Query(array( 'post_type' => 'testimonials', 'posts_per_page' => 1, 'orderby' => 'rand' ));
 

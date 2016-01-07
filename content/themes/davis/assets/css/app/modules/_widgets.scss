@@ -64,9 +64,11 @@
 
 
 .widget-related-news {
-  @include respond-to(900) {
-    margin: rem($space-xl) 1em;
-  }
+   margin: 3em 1em 4em 1em;
+
+   @include respond-to(900) {
+      margin: rem($space-xl) 1em;
+   }
 }
 
 
