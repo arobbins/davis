@@ -22,7 +22,7 @@
     @include respond-to(500) {
       margin-left: 0;
     }
-    
+
   }
 
   .testimonial {
@@ -176,6 +176,10 @@
 }
 
 .widget-snippet {
-  margin-top: 0;
+  margin: 0 0 1em;
   font-size: $font-xs;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
