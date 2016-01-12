@@ -16,9 +16,15 @@
 
         while ( $loop->have_posts() ) : $loop->the_post();
 
-          $thumb_id = get_post_thumbnail_id();
-          $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumb', true);
-          $thumb_url = $thumb_url_array[0];
+          if ( has_post_thumbnail() ) {
+
+            $thumb_id = get_post_thumbnail_id();
+            $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumb', true);
+            $thumb_url = $thumb_url_array[0];
+
+          } else {
+            $thumb_url = get_field('global_default_header_image', 'option');
+          }
 
         ?>
 
