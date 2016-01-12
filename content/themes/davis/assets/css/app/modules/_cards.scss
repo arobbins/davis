@@ -42,14 +42,14 @@
   margin: 10px 0 0 0;
   font-size: rem(22px);
 
-  @include respond-to(1100) {
+  @include respond-to(1100, 'max') {
     font-size: rem(20px);
   }
 
   .fa {
     font-size: rem(40px);
 
-    @include respond-to(1100) {
+    @include respond-to(1100, 'max') {
       font-size: rem(34px);
     }
 

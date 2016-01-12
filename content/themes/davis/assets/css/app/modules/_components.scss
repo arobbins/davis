@@ -7,7 +7,7 @@
 .component-heading {
   margin-bottom: 1em;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     font-size: rem($base*2);
   }
 }

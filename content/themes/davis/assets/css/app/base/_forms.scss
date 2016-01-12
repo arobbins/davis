@@ -26,7 +26,7 @@
       opacity: 0.8;
     }
 
-    @include respond-to(600) {
+    @include respond-to(600, 'max') {
       width: 100%;
     }
 
@@ -43,7 +43,7 @@
     font-size: $font-base;
     padding: 10px 20px;
 
-    @include respond-to(600) {
+    @include respond-to(600, 'max') {
       width: 100%;
       margin-bottom: 1em;
     }

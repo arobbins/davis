@@ -3,7 +3,7 @@
   width: 100%;
   padding: 4em 0;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     padding: 4em 1em;
   }
 
@@ -24,7 +24,7 @@
         padding-right: 0;
         border-right: 0;
 
-        @include respond-to(600) {
+        @include respond-to(600, 'max') {
           border-bottom: none;
         }
 
@@ -43,7 +43,7 @@
     display: block;
     //border-right: 1px solid color(grey);
 
-    @include respond-to(600) {
+    @include respond-to(600, 'max') {
       border-right: none;
       text-align: center;
       margin: 0.4em 0;
@@ -84,7 +84,7 @@
 .footer-social {
   margin-top: 1em;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     display: flex;
     justify-content: center;
   }
@@ -94,7 +94,7 @@
 .footer-widgets {
   margin-bottom: 4em;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     margin-bottom: 1em;
   }
 }
@@ -107,7 +107,7 @@
   margin: 0;
   list-style: none;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     flex-direction: column;
   }
 }
@@ -117,7 +117,7 @@
   border-top: 1px solid color(grey);
   padding: 2em 0 0 0;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     padding-bottom: 0;
   }
 }
@@ -137,7 +137,7 @@
   padding-top: 4em;
   margin: 3em 0 1em 0;
 
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     align-items: center;
   }
 

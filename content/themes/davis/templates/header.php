@@ -29,9 +29,9 @@
 
   <div class="video-wrapper header">
 
-    <video autoplay preload loop muted poster="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/davis-video-poster.jpg" class="video">
-      <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/video/davis.mp4" type="video/mp4">
-      <source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/video/davis.webm" type="video/webm">
+    <video autoplay preload loop muted poster="<?php the_field('global_default_header_image', 'option'); ?>" class="video">
+      <source src="<?php the_field('global_homepage_marquee_video_mp4', 'option'); ?>" type="video/mp4">
+      <source src="<?php the_field('global_homepage_marquee_video_webm', 'option'); ?>" type="video/webm">
     </video>
 
     <div class="l-row l-row-center l-contained header-container">
@@ -45,8 +45,8 @@
               wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'nav nav-secondary l-row l-row-right']);
             endif;
           ?>
-          <a href="<?php the_field('global_social_facebook'); ?>" class="icon icon-facebook"></a>
-          <a href="<?php the_field('global_social_twitter'); ?>" class="icon icon-twitter"></a>
+          <a href="<?php the_field('global_social_facebook', 'option'); ?>" class="icon icon-facebook"></a>
+          <a href="<?php the_field('global_social_twitter', 'option'); ?>" class="icon icon-twitter"></a>
         </nav>
 
         <nav class="l-row l-row-right nav-primary">
@@ -103,8 +103,8 @@
               wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'nav nav-secondary l-row l-row-right']);
             endif;
           ?>
-          <a href="<?php the_field('global_social_facebook'); ?>" class="icon icon-facebook"></a>
-          <a href="<?php the_field('global_social_twitter'); ?>" class="icon icon-twitter"></a>
+          <a href="<?php the_field('global_social_facebook', 'option'); ?>" class="icon icon-facebook"></a>
+          <a href="<?php the_field('global_social_twitter', 'option'); ?>" class="icon icon-twitter"></a>
         </nav>
 
         <nav class="l-row l-row-right nav-primary">

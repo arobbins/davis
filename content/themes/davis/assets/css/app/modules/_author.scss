@@ -74,12 +74,12 @@
   font-size: 12px;
 
   a {
-    @include respond-to(400) {
+    @include respond-to(400, 'max') {
       display: block;
     }
   }
 
-  @include respond-to(400) {
+  @include respond-to(400, 'max') {
     margin-bottom: 1em;
   }
 }
@@ -89,7 +89,7 @@
   margin: rem($space-l) 0;
   border-top: 1px solid color(borders);
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     flex-direction: column;
   }
 }
@@ -97,7 +97,7 @@
 .author-footer-avatar {
   margin-right: rem($space-s);
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     margin-right: 0;
     margin-bottom: rem($space-s);
     align-self: center;
@@ -106,14 +106,14 @@
 }
 
 .author-contact {
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     justify-content: center;
     width: 100%;
     display: flex;
     margin: rem($space-s) 0;
   }
 
-  @include respond-to(400) {
+  @include respond-to(400, 'max') {
     flex-direction: column;
     margin-top: 0;
   }
@@ -123,7 +123,7 @@
   font-size: rem($bio);
   margin: 0 0 0 rem($space-m);
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     text-align: center;
     margin-left: 0;
   }
@@ -136,13 +136,13 @@
     margin-top: 0;
     max-width: 100%;
 
-    @include respond-to(900) {
+    @include respond-to(900, 'max') {
       width: 80%;
       text-align: center;
       margin: 0 auto;
     }
 
-    @include respond-to(400) {
+    @include respond-to(400, 'max') {
       width: 100%;
     }
 
@@ -154,7 +154,7 @@
   font-size: rem($author-footer-name);
   font-weight: bold;
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     margin: 0;
     display: flex;
     width: 100%;
@@ -167,7 +167,7 @@
 .author-footer-social {
   margin: rem(2px) rem(18px) rem(5px) rem(10px);
 
-  @include respond-to(400) {
+  @include respond-to(400, 'max') {
     margin-top: rem($space-s);
   }
 }
@@ -175,12 +175,12 @@
 .author-footer-donations {
   margin: rem(5px) 0 0 rem(3px);
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     margin-right: rem(84px);
     text-align: center;
   }
 
-  @include respond-to(400) {
+  @include respond-to(400, 'max') {
     margin-bottom: rem($space-s / 2);
     margin-top: rem($space-s);
   }

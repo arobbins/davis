@@ -18,7 +18,7 @@
   padding-bottom: rem($space-s / 2);
   font-size: rem($article-info);
 
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     flex-direction: row;
   }
 }
@@ -31,7 +31,7 @@
     color: color(darkblue);
   }
 
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     display: none;
   }
 }
@@ -53,7 +53,7 @@
   justify-content: center;
   margin: rem($space-l * 2) 0;
 
-  @include respond-to(800) {
+  @include respond-to(800, 'max') {
     margin-bottom: rem($space-m);
   }
 }
@@ -70,13 +70,13 @@
   left: -2px;
   margin: 0 1.2em;
 
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     display: none;
   }
 }
 
 .article-date {
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     display: inline;
     width: auto;
     margin-right: rem($space-s);
@@ -88,7 +88,7 @@
   font-size: rem($article-more);
   border: none;
 
-  @include respond-to(800) {
+  @include respond-to(800, 'max') {
     margin: 0;
     display: block;
     width: 100%;

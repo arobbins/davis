@@ -31,11 +31,19 @@
 }
 
 // Breakpoints
-@mixin respond-to($breakpoint) {
+@mixin respond-to($breakpoint, $size) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
-      @content;
+
+    @if($size == 'max') {
+      @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
+    } @else {
+      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
     }
+
   }
 
   @else {

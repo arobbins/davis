@@ -2,14 +2,13 @@
 
 <?php if($form === "true") { ?>
 
-  <section class="l-box widget">
-    <h1 class="widget-title"><?php echo $title; ?></h1>
-    <?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true tabindex=49]'); ?>
+  <section class="l-box widget widget-contact">
+    <?php echo do_shortcode('[lexicata-contact-form]'); ?>
   </section>
 
 <?php } else { ?>
 
-  <section class="l-box l-box-3 widget">
+  <section class="l-box l-box-3 widget widget-contact">
     <h1 class="widget-title"><?php echo $title; ?></h1>
     <ul class="footer-contact">
       <li class="footer-contact-item">Phone: <?php the_field('global_contact_phone', 'options'); ?></li>

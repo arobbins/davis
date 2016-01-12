@@ -1,7 +1,7 @@
 .main {
   margin: 2em auto;
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     flex-direction: column;
   }
 
@@ -17,7 +17,7 @@
     margin-top: 0;
   }
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     padding: rem($space-m*2) 0;
     margin: rem($space-l) 0;
     border-top: 1px solid #d8dbdf;
@@ -25,12 +25,12 @@
     width: 100%;
   }
 
-  @include respond-to(800) {
+  @include respond-to(800, 'max') {
     flex: 0 0 auto;
     margin-top: 0;
   }
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     margin-top: 0;
     margin-bottom: rem($space-s);
   }
@@ -41,7 +41,7 @@
   padding-bottom: rem(space-m);
   margin-bottom: 2em;
 
-  @include respond-to(800) {
+  @include respond-to(800, 'max') {
     padding-right: 0;
   }
 }
@@ -49,7 +49,7 @@
 .content {
   margin-top: rem($space-l * 2);
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     margin-top: rem($space-m);
     flex-direction: column-reverse;
   }
@@ -75,7 +75,7 @@
 .post-preview {
   padding: 0 rem($space-m * 2) rem($space-m * 2);
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     padding: 0;
   }
 
@@ -93,7 +93,7 @@
     border-bottom: none;
 
     &:last-child {
-      @include respond-to(600) {
+      @include respond-to(600, 'max') {
         padding: 0;
       }
     }
@@ -134,7 +134,7 @@
 }
 
 .nav-primary {
-  @include respond-to(700) {
+  @include respond-to(700, 'max') {
     display: none;
   }
 }
@@ -153,11 +153,17 @@
   margin-bottom: 0.5em;
   text-transform: uppercase;
 
-  @include respond-to(900) {
+  @include respond-to(1300, 'min') {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 70px;
+  }
+
+  @include respond-to(900, 'max') {
     font-size: 40px;
   }
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     width: 90%;
     font-size: 30px;
   }
@@ -166,7 +172,7 @@
 .marquee-text h1 {
   font-size: 54px;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     font-size: 42px;
   }
 }
@@ -174,14 +180,22 @@
 .home .marquee-text {
   top: 50%;
 
-  @include respond-to(800) {
+  @include respond-to(1300, 'min') {
+    h1 {
+      max-width: 90%;
+      margin: 0 auto;
+      font-size: 70px;
+    }
+  }
+
+  @include respond-to(800, 'max') {
     width: 90%;
   }
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
    h1 {
-   font-size: 36px;
-   margin-bottom: 1em;
+     font-size: 36px;
+     margin-bottom: 1em;
    }
   }
 
@@ -196,7 +210,7 @@
   top: 30%;
   transform: translate(-50%,-50%);
 
-  @include respond-to(1000) {
+  @include respond-to(1000, 'max') {
     width: 90%;
   }
 }

@@ -38,7 +38,7 @@ use Roots\Sage\Wrapper;
 
       <?php if (Setup\display_sidebar()) : ?>
 
-        <div class="l-row l-row-center l-fit main">
+        <div class="l-row l-row-center l-fill main cf">
           <main class="l-box l-fill" role="document">
             <?php include Wrapper\template_path(); ?>
           </main>
@@ -53,8 +53,8 @@ use Roots\Sage\Wrapper;
 
           if(!empty($content)) { ?>
 
-            <main class="l-row l-row-center l-fit main" role="document">
-              <div class="l-box l-fit">
+            <main class="l-row l-row-center l-fill main cf" role="document">
+              <div class="l-box l-fill">
                 <?php include Wrapper\template_path(); ?>
               </div>
             </main>

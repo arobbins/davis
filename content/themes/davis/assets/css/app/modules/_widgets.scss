@@ -19,7 +19,7 @@
     color: color(lightgrey);
     margin-left: 60px;
 
-    @include respond-to(500) {
+    @include respond-to(500, 'max') {
       margin-left: 0;
     }
 
@@ -32,11 +32,11 @@
     position: relative;
     margin-left: 50px;
 
-    @include respond-to(1100) {
+    @include respond-to(1100, 'max') {
       font-size: rem(20px);
     }
 
-    @include respond-to(500) {
+    @include respond-to(500, 'max') {
       margin-left: 0;
       width: 100%;
     }
@@ -53,11 +53,11 @@
       top: 0;
       left: -50px;
 
-      @include respond-to(900) {
+      @include respond-to(900, 'max') {
         top: -10px;
       }
 
-      @include respond-to(500) {
+      @include respond-to(500, 'max') {
         top: -50px;
         display: block;
         width: 100%;
@@ -76,7 +76,7 @@
       margin: 0 0 0 10px;
       font-size: rem(20px);
 
-      @include respond-to(500) {
+      @include respond-to(500, 'max') {
         margin-left: 0;
         margin-top: 25px;
       }
@@ -91,14 +91,14 @@
 .widget-related-news {
    margin: 3em 1em 4em 1em;
 
-   @include respond-to(900) {
+   @include respond-to(900, 'max') {
       margin: rem($space-xl) 1em;
    }
 }
 
 
 .widget-social {
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     margin-top: rem($space-xl);
   }
 }
@@ -106,7 +106,7 @@
 
 .widget-signature {
   img {
-    @include respond-to(900) {
+    @include respond-to(900, 'max') {
       max-width: 70%;
       margin: 0 auto;
     }
@@ -120,7 +120,7 @@
   color: color(lightgrey);
   margin: 0 0 1em 0;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     text-align: center;
   }
 }
@@ -150,12 +150,7 @@
   }
 }
 
-
-
-
-
-
-.widget-title-link {
+a.widget-title-link {
   border-bottom: 1px solid color(lightgrey);
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -168,6 +163,7 @@
 
   &:hover {
     text-decoration: none;
+
     h2 {
       text-decoration: none;
       color: darken(color(red), $hoverDarken);
@@ -182,4 +178,9 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+
+.widget-contact {
+  margin-top: -1em;
 }

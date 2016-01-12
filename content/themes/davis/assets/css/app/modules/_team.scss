@@ -1,7 +1,7 @@
 .team-member {
   margin-bottom: 2em;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     margin-bottom: 3em;
   }
 }
@@ -10,11 +10,11 @@
   width: 64%;
   margin: 0 auto 1em auto;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     width: 34%;
   }
 
-  @include respond-to(400) {
+  @include respond-to(400, 'max') {
     width: 75%;
   }
 }

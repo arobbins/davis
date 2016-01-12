@@ -10,7 +10,7 @@ div.gform_wrapper .gform_footer input[type=submit],
    padding: 10px 30px;
    font-weight: bold;
 
-   @include respond-to(600) {
+   @include respond-to(600, 'max') {
       font-size: rem($base);
       width: 100%;
    }
@@ -26,7 +26,7 @@ div.gform_wrapper .gform_footer input[type=submit] {
 .btn-l {
    font-size: $font-btn-l;
 
-   @include respond-to(600) {
+   @include respond-to(600, 'max') {
       padding: 10px 30px;
    }
 }

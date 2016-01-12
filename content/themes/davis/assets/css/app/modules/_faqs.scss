@@ -1,5 +1,5 @@
 .faqs {
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     margin: 0;
   }
 }
@@ -9,7 +9,7 @@
   font-size: 18px;
   -webkit-tap-highlight-color: transparent;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     padding-left: 0;
     font-size: 16px;
   }
@@ -39,7 +39,7 @@
     margin-top: 0;
   }
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     margin-left: 10px;
   }
 
@@ -48,7 +48,7 @@
 .faqs-heading {
   font-size: 28px;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     font-size: 22px;
   }
 }

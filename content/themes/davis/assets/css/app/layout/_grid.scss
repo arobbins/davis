@@ -41,7 +41,7 @@ $cols-7: 7;
 .l-box-2 {
   @include rowMachine($cols-2, $margin);
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     @include rowMachine($cols-1, $margin);
   }
 }
@@ -49,11 +49,11 @@ $cols-7: 7;
 .l-box-3 {
   @include rowMachine($cols-3, $margin);
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     @include rowMachine($cols-2, $margin);
   }
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     @include rowMachine($cols-1, $margin);
   }
 }
@@ -61,11 +61,11 @@ $cols-7: 7;
 .l-box-4 {
   @include rowMachine($cols-4, $margin);
 
-  @include respond-to(800) {
+  @include respond-to(800, 'max') {
     @include rowMachine($cols-2, $margin);
   }
 
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     @include rowMachine($cols-1, $margin);
   }
 }
@@ -73,11 +73,11 @@ $cols-7: 7;
 .l-box-5 {
   @include rowMachine($cols-5, $margin);
 
-  @include respond-to(800) {
+  @include respond-to(800, 'max') {
     @include rowMachine($cols-2, $margin);
   }
 
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     @include rowMachine($cols-1, $margin);
   }
 }
@@ -85,19 +85,19 @@ $cols-7: 7;
 .l-box-6 {
   @include rowMachine($cols-6, $margin);
 
-  @include respond-to(1000) {
+  @include respond-to(1000, 'max') {
     @include rowMachine($cols-4, $margin);
   }
 
-  @include respond-to(800) {
+  @include respond-to(800, 'max') {
     @include rowMachine($cols-3, $margin);
   }
 
-  @include respond-to(700) {
+  @include respond-to(700, 'max') {
     @include rowMachine($cols-2, $margin);
   }
 
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     @include rowMachine($cols-1, $margin);
   }
 }
@@ -105,23 +105,23 @@ $cols-7: 7;
 .l-box-7 {
   @include rowMachine($cols-7, $margin);
 
-  @include respond-to(1100) {
+  @include respond-to(1100, 'max') {
     @include rowMachine($cols-5, $margin);
   }
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     @include rowMachine($cols-4, $margin);
   }
 
-  @include respond-to(700) {
+  @include respond-to(700, 'max') {
     @include rowMachine($cols-3, $margin);
   }
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     @include rowMachine($cols-2, $margin);
   }
 
-  @include respond-to(500) {
+  @include respond-to(500, 'max') {
     @include rowMachine($cols-1, $margin);
   }
 }
@@ -129,11 +129,11 @@ $cols-7: 7;
 [class*="l-box"] {
   margin: 0 1em;
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     margin: 0.5em;
   }
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     margin: 0.5em 1em;
   }
 }
@@ -211,8 +211,7 @@ $cols-7: 7;
 // Spacing
 //
 .l-fit {
-  flex: 1;
-  min-width: 0;
+  flex-grow: 1;
 }
 
 .l-fill {
@@ -229,20 +228,22 @@ $cols-7: 7;
 //
 .no-flexbox {
 
+  .cf:before,
+  .cf:after {
+    content: " ";
+    display: table;
+  }
+
+  .cf:after {
+    clear: both;
+  }
+
    .l-row,
    .l-col {
       display: table;
       table-layout: fixed;
       vertical-align: top;
    }
-
-   .l-col {
-      // float: left;
-   }
-
-
-   // .menu-secondary-navigation-container,
-   // .menu-secondary-navigation-container .icon
 
    .l-fill,
    .l-box-1,
@@ -350,38 +351,24 @@ $cols-7: 7;
       margin: 0 auto;
    }
 
+   .main {
+     display: block;
+
+     main {
+       float: left;
+       width: 66%;
+       display: block;
+     }
+   }
+
+   .sidebar {
+     float: left;
+     width: 28%;
+     display: block;
+   }
+
 }
 
 .flexboxlegacy {
-   // .l-box-1 {
-   //    width: 100%;
-   // }
-   //
-   // .l-box-2 {
-   //    width: 46%;
-   // }
-   //
-   // .l-box-3 {
-   //    width: 28%;
-   // }
-   //
-   // .l-box-4 {
-   //    width: 21%;
-   // }
-   //
-   // .l-box-5 {
-   //    width: 17%;
-   // }
-   //
-   // .l-box-6 {
-   //    width: 12.666666667%;
-   // }
-   //
-   // .l-box-7 {
-   //    width: 11.285714286%;
-   // }
-   //
-   // .header {
-   //    min-height: 450px;
-   // }
+
 }

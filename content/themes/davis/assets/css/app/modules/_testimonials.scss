@@ -15,7 +15,7 @@
   position: relative;
   width: 80%;
 
-  @include respond-to(600) {
+  @include respond-to(600, 'max') {
     font-size: rem(24px);
   }
 
@@ -31,7 +31,7 @@
     top: -10px;
     left: -60px;
 
-    @include respond-to(800) {
+    @include respond-to(800, 'max') {
       top: -39px;
       left: 45%;
     }
@@ -43,7 +43,7 @@
     bottom: -10px;
     right: -60px;
 
-    @include respond-to(800) {
+    @include respond-to(800, 'max') {
       display: none;
     }
   }

@@ -17,7 +17,7 @@
     }
   }
 
-  @include respond-to(1000) {
+  @include respond-to(1000, 'max') {
     display: none;
   }
 }
@@ -39,14 +39,14 @@
     }
   }
 
-  @include respond-to(1000) {
+  @include respond-to(1000, 'max') {
     display: none;
   }
 }
 
 
 .nav-wrapper {
-  @include respond-to(1000) {
+  @include respond-to(1000, 'max') {
     display: none;
   }
 }
@@ -127,7 +127,7 @@
   right: 10px;
   top: 10px;
 
-  @include respond-to(1000) {
+  @include respond-to(1000, 'max') {
     display: block;
     float: right;
   }

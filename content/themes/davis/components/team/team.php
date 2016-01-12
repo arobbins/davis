@@ -13,6 +13,7 @@
             <div class="team-bio"><?php the_field('staff_bio', get_the_id()); ?></div>
             <div class="team-social">
               <ul class="l-row l-row-center team-social-list">
+
                 <?php if(get_field('staff_linkedin', get_the_id())) { ?>
                   <li class="team-social-item">
                     <a href="<?php the_field('staff_linkedin', get_the_id()); ?>" class="team-social-link">
@@ -32,7 +33,7 @@
                 <?php if(get_field('staff_facebook', get_the_id())) { ?>
                   <li class="team-social-item">
                     <a href="<?php the_field('staff_facebook', get_the_id()); ?>" class="team-social-link">
-                    <i class="fa fa-facebook team-social-icon"></i>
+                      <i class="fa fa-facebook team-social-icon"></i>
                     </a>
                   </li>
                 <?php } ?>

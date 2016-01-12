@@ -1,7 +1,7 @@
 table {
   width: 100%;
 
-  @include respond-to(700) {
+  @include respond-to(700, 'max') {
     border: none;
   }
 }
@@ -21,7 +21,7 @@ td, th {
   }
 
   &:first-child {
-    @include respond-to(500) {
+    @include respond-to(500, 'max') {
       min-width: auto;
     }
   }
@@ -34,7 +34,7 @@ tr {
   &:nth-child(even) {
     background-color: color(rows);
 
-    @include respond-to(500) {
+    @include respond-to(500, 'max') {
       min-width: auto;
     }
   }
@@ -51,7 +51,7 @@ th {
   display: none;
   border: none;
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     display: block;
   }
 
@@ -63,7 +63,7 @@ th {
 
 table.large-only {
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     display: none;
   }
 }

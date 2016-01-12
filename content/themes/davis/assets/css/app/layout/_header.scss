@@ -3,7 +3,7 @@
   position: relative;
   background-size: cover;
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     min-height: 35vh;
     background-position-x: 40%;
 
@@ -19,7 +19,7 @@
   padding-top: 1em;
 
   .logo-wrapper {
-    @include respond-to(900) {
+    @include respond-to(900, 'max') {
       width: 100%;
       position: relative;
       top: 10px;
@@ -29,11 +29,11 @@
     }
   }
 
-  @include respond-to(1000) {
+  @include respond-to(1000, 'max') {
     justify-content: flex-start;
   }
 
-  @include respond-to(900) {
+  @include respond-to(900, 'max') {
     width: 80%;
     float: left;
     padding-top: 0;
