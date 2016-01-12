@@ -10,9 +10,17 @@
   }
 
   if(is_single()) {
-    $thumb_id = get_post_thumbnail_id();
-    $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
-    $thumb_url = $thumb_url_array[0];
+
+    if ( has_post_thumbnail() ) {
+
+      $thumb_id = get_post_thumbnail_id();
+      $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+      $thumb_url = $thumb_url_array[0];
+
+    } else {
+      $thumb_url = get_field('global_default_header_image', 'option');
+    }
+
   }
 
 ?>
@@ -67,7 +75,7 @@
 
   <?php if(is_single()) { ?>
 
-  <header class="header" style="background-image: url('<?php echo $thumb_url; ?>')">
+  <header class="header <?php if ( has_post_thumbnail() ) { } else { echo 'default'; }?>" style="background-image: url('<?php echo $thumb_url; ?>')">
 
   <?php } else { ?>
 

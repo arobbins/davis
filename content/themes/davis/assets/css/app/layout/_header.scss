@@ -5,7 +5,14 @@
 
   @include respond-to(900) {
     min-height: 35vh;
+    background-position-x: 40%;
+
+    &.default {
+      background-position-x: 72%;
+    }
   }
+
+
 }
 
 .header-container {
