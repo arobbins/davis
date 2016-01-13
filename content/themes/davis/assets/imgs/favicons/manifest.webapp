@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "Davis Law Office",
+  "description": "Davis Law Office-Minneapolis, MN. A Business Law Firm With A Different Approach.",
+  "icons": {
+    "60": "firefox_app_60x60.png",
+    "128": "firefox_app_128x128.png",
+    "512": "firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Davis Law Office",
+    "url": "http://davismeansbusiness.com"
+  }
+}

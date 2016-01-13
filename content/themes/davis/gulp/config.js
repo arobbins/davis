@@ -11,6 +11,11 @@ module.exports = {
       vendor: './assets/js/vendor/*.js',
       dest: './assets/js',
       all: './assets/js/**/*.js'
+		},
+		favicon: {
+			entry: './assets/imgs/favicons/favicon.png',
+			dest: './assets/imgs/favicons',
+			all: './assets/imgs/favicons/**/*'
 		}
 	},
 	names: {
