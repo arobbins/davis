@@ -5,3 +5,9 @@
 .client-image:hover {
   opacity: 0.6;
 }
+
+.client-image {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+}
