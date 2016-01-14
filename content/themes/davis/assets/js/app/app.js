@@ -39,9 +39,6 @@
       slideout.toggle();
     });
 
-
-
-
     var toggles = document.querySelectorAll(".menu-mobile-toggle");
 
     for (var i = toggles.length - 1; i >= 0; i--) {

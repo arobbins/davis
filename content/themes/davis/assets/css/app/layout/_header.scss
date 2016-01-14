@@ -51,6 +51,8 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: none;
+  // background-color: transparent;
+  // transition: all 3s ease;
 }
 
 .slideout-panel {
@@ -67,5 +69,5 @@
 .slideout-open .slideout-menu {
   display: block;
   right: 0;
-
+//  background-color: color(blue);
 }
