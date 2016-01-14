@@ -1,7 +1,7 @@
 <section class="component component-clients">
   <div class="l-row l-row-center">
       <?php
-        $loop = new WP_Query(array( 'post_type' => 'clients', 'orderby' => 'date', 'order' => 'ASC'));
+        $loop = new WP_Query(array( 'post_type' => 'clients', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1));
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="l-box l-box-4 l-col l-col-center client">

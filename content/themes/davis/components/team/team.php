@@ -3,7 +3,7 @@
 
       <?php
 
-        $loop = new WP_Query(array( 'post_type' => 'staff', 'orderby' => 'date', 'order' => 'ASC'));
+        $loop = new WP_Query(array( 'post_type' => 'staff', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1));
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="l-box l-box-3 team-member">
