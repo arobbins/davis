@@ -369,18 +369,19 @@ $cols-7: 7;
 
 
 
-   .component-clients {
+  .component-clients {
 
-      & > div {
-        display: block;
-      }
-
-      .client {
-        float: left;
-        display: block;
-      }
-
+    & > div {
+      display: block;
     }
+
+    .client {
+      display: block;
+      float: left;
+    }
+
+  }
+
 }
 
 .flexboxlegacy {
