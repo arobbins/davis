@@ -228,12 +228,15 @@ $cols-7: 7;
 //
 .no-flexbox {
 
+  .component-clients > div:before,
+  .component-clients > div:after,
   .cf:before,
   .cf:after {
     content: " ";
     display: table;
   }
 
+  .component-clients > div:after,
   .cf:after {
     clear: both;
   }
