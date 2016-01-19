@@ -29,7 +29,7 @@
 
   <div class="video-wrapper header">
 
-    <video autoplay preload loop muted poster="<?php the_field('global_default_header_image', 'option'); ?>" class="video">
+    <video autoplay preload loop muted poster="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/transparent.png" class="video">
       <source src="<?php the_field('global_homepage_marquee_video_mp4', 'option'); ?>" type="video/mp4">
       <source src="<?php the_field('global_homepage_marquee_video_webm', 'option'); ?>" type="video/webm">
     </video>
