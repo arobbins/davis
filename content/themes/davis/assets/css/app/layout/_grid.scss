@@ -367,6 +367,15 @@ $cols-7: 7;
      display: block;
    }
 
+   .client {
+     float: left;
+     display: block;
+   }
+
+   .component-clients > div {
+     display: block;
+   }
+
 }
 
 .flexboxlegacy {
