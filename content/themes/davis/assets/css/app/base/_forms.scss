@@ -125,8 +125,12 @@ input[type=search],
 }
 
 #lf_form_container {
+
+  max-width: 700px;
+
  .button_text {
   width: auto;
+
   &:hover {
    background-color: color(blueDark) !important;
    color: color(white) !important;

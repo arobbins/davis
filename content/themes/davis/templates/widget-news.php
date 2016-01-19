@@ -9,7 +9,11 @@
     $cat = get_the_category($currentPostID);
   }
 
-  $args = array('numberposts' => 3, 'category' => $cat[0]->term_id);
+  $args = array(
+    'numberposts' => 3,
+    'category' => $cat[0]->term_id,
+    'post_status' => 'publish'
+  );
 
   $recent_posts = wp_get_recent_posts($args);
 

@@ -6,6 +6,7 @@
         $loop = new WP_Query(array( 'post_type' => 'staff', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1));
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
         <div class="l-box l-box-3 team-member">
             <img src="<?php the_field('staff_image', get_the_id()); ?>" class="team-image is-circle">
             <h2 class="team-name"><?php the_field('staff_name', get_the_id()); ?></h2>
@@ -36,14 +37,16 @@
                       <i class="fa fa-facebook team-social-icon"></i>
                     </a>
                   </li>
+                  
                 <?php } ?>
 
               </ul>
             </div>
         </div>
+
         <?php endwhile;
 
-        wp_reset_query();
+        wp_reset_postdata();
 
       ?>
 

@@ -7,6 +7,19 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
+<?php
+
+  // $args = array(
+  //   'post_type'      => 'post',
+  //   'posts_per_page' => get_option('posts_per_page'),
+  //   'ignore_sticky_posts' => true,
+  //   'posts_per_page' => 10
+  // );
+  //
+  // $loop = new WP_Query($args);
+
+?>
+
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 <?php endwhile; ?>

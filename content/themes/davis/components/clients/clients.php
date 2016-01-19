@@ -1,6 +1,7 @@
 <section class="component component-clients">
   <div class="l-row l-row-center">
       <?php
+      
         $loop = new WP_Query(array( 'post_type' => 'clients', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1));
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -12,7 +13,7 @@
         </div>
         <?php endwhile;
 
-        wp_reset_query();
+        wp_reset_postdata();
 
       ?>
   </div>

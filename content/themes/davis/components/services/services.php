@@ -9,6 +9,7 @@
 
     <div class="l-row l-row-center">
       <?php
+
         $loop = new WP_Query(array( 'post_type' => 'services', 'posts_per_page' => -1 ));
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -24,7 +25,7 @@
 
         <?php endwhile;
 
-        wp_reset_query();
+        wp_reset_postdata(); 
 
       ?>
     </div>

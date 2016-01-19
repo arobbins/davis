@@ -50,3 +50,13 @@ function replace_reply_link_class($class){
    return $class;
 }
 add_filter('comment_reply_link', 'replace_reply_link_class');
+
+
+
+
+function posts_link_attributes() {
+  return 'class="btn btn-primary"';
+}
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
