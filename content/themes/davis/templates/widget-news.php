@@ -24,7 +24,7 @@
   <?php
     foreach( $recent_posts as $recent ){
       echo '<a href="' . get_permalink($recent["ID"]) . '" class="widget-title-link"><h2>' .   $recent["post_title"].'</h2></a>';
-      echo '<div class="widget-snippet">' . get_the_excerpt() . '</div>';
+      echo '<div class="widget-snippet">' . get_post_excerpt_by_id($recent["ID"]) . '</div>';
     }
   ?>
 </section>

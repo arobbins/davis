@@ -51,12 +51,24 @@ function replace_reply_link_class($class){
 }
 add_filter('comment_reply_link', 'replace_reply_link_class');
 
-
-
-
+//
+// Updating class links on blog buttons
+//
 function posts_link_attributes() {
   return 'class="btn btn-primary"';
 }
 
 add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+//
+// Getting an excerpt by post ID
+//
+function get_post_excerpt_by_id($post_id) {
+  global $post;
+  $post = get_post( $post_id );
+  setup_postdata( $post );
+  $the_excerpt = get_the_excerpt();
+  wp_reset_postdata();
+  return $the_excerpt;
+}
