@@ -18,6 +18,8 @@
   padding-top: 1em;
 
   .logo-wrapper {
+    padding-top: 0.5em;
+
     @include respond-to(900, 'max') {
       width: 100%;
       position: relative;
