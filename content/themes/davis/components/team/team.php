@@ -7,11 +7,11 @@
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-        <div class="l-box l-box-3 team-member">
+        <div class="l-box l-row team-member">
+          <div class="l-box l-box-3">
             <img src="<?php the_field('staff_image', get_the_id()); ?>" class="team-image is-circle">
             <h2 class="team-name"><?php the_field('staff_name', get_the_id()); ?></h2>
             <h3 class="team-role"><?php the_field('staff_role', get_the_id()); ?></h3>
-            <div class="team-bio"><?php the_field('staff_bio', get_the_id()); ?></div>
             <div class="team-social">
               <ul class="l-row l-row-center team-social-list">
 
@@ -37,11 +37,16 @@
                       <i class="fa fa-facebook team-social-icon"></i>
                     </a>
                   </li>
-                  
+
                 <?php } ?>
 
               </ul>
             </div>
+          </div>
+          <div class="l-box l-fill">
+            <div class="team-bio"><?php the_field('staff_bio', get_the_id()); ?></div>
+          </div>
+
         </div>
 
         <?php endwhile;

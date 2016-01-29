@@ -72,3 +72,18 @@ function get_post_excerpt_by_id($post_id) {
   wp_reset_postdata();
   return $the_excerpt;
 }
+
+//
+// Changing the default Wordpress login logo
+//
+function custom_login_logo() { ?>
+  <style type="text/css">
+    .login h1 a {
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/logo-primary.svg);
+      padding-bottom: 20px;
+      width: 300px;
+      background-size: contain;
+    }
+  </style>
+<?php }
+add_action('login_enqueue_scripts', 'custom_login_logo');
