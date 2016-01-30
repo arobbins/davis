@@ -1,17 +1,17 @@
 .team-member {
   margin-bottom: 2em;
 
-  .l-fill {
-    margin: 0;
-    padding: 0;
-  }
-
   .l-box-3 {
     padding: 0;
   }
 
   @include respond-to(600, 'max') {
     margin-bottom: 3em;
+
+    .l-fill {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
