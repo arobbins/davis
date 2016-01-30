@@ -8,6 +8,7 @@
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
         <div class="l-box l-row team-member">
+          
           <div class="l-box l-box-3">
             <img src="<?php the_field('staff_image', get_the_id()); ?>" class="team-image is-circle">
             <h2 class="team-name"><?php the_field('staff_name', get_the_id()); ?></h2>
@@ -43,6 +44,7 @@
               </ul>
             </div>
           </div>
+
           <div class="l-box l-fill">
             <div class="team-bio"><?php the_field('staff_bio', get_the_id()); ?></div>
           </div>
